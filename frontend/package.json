@@ -4,7 +4,8 @@
   "description": "Welcome to the Toolmatching",
   "main": "gulpfile.js",
   "dependencies": {
-    "bootstrap": "^4.4.1"
+    "bootstrap": "^4.4.1",
+    "feather-icons": "^4.28.0"
   },
   "devDependencies": {
     "browser-sync": "^2.26.7",
