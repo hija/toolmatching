@@ -50,6 +50,9 @@ def create_app(test_config=None):
         data = category_data_dict[category]["Questions"][questionid]
         if data['type'] == 'yes-no':
             return render_template('YesNo.html', question=data['question'], questionid=questionid)
+        elif data['type'] == 'single-choice':
+            return render_template('SingleChoice.html', question=data['question'],
+                                   choices=data['choices'], questionid=questionid)
         #return
 
     def calculate_tool_result():
@@ -65,7 +68,6 @@ def create_app(test_config=None):
                     users_values = session['answers'][attribute]
 
                     if tool_values is list and users_values is list:
-                        print('Both are lists')
                         if bool(set(tool_values) & set(users_values)):
                             tool_points[tool['name']] += 1
 
@@ -123,7 +125,6 @@ def create_app(test_config=None):
             else:
                 return get_question(session['category'], session['question'])
         else:
-            print(request.values)
             ### INVALID REQUEST
             return jsonify({'error': 'Invalid request'})
     return app

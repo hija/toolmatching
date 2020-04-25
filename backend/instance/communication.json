@@ -13,7 +13,7 @@
     },
 	{
       "id": "business-type",
-      "type": "multiple-choice",
+      "type": "single-choice",
       "question": "Which type of business will this tool be used for?",
       "choices": ["Individual", "SME", "Enterprise"]
     },
