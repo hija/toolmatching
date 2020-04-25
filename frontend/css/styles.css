@@ -1,0 +1,273 @@
+body {
+  margin: 0;
+  font-family: 'rubik', sans-serif;
+  background-color: #e9ecef;
+}
+
+header {
+  margin: 0;
+  font-family: 'rubik', sans-serif;
+}
+
+h1,h2,h3,h4,h5,h6,p {
+  font-family: 'rubik', sans-serif;
+}
+
+.navbar-custom {
+  color: rgb(0, 0, 0);
+}
+
+.round-header {
+  font-family: 'Open Sans', sans-serif;
+  color: rgb(0, 0, 0);
+  margin-bottom:0;
+  margin-top:0;
+}
+
+.jumbotron {
+  display: flex;
+  left: 0;
+  bottom: 0;
+  height: 90%;
+  padding-bottom: 0;
+  z-index: 4;
+}
+
+.container {
+  display: inline-block;
+  align-self: flex-end;
+  max-width: 60%;
+  margin-left: 50px;
+  margin-bottom: 70px;
+  z-index: 3;
+}
+
+#person {
+  align-self: flex-end;
+  margin-bottom: 0px;
+  margin-right: 8%;
+  z-index: 3;
+}
+
+#icons {
+  z-index: 0;
+  position: absolute;
+  align-self: flex-end;
+  right: 0px;
+  bottom: 100%;
+  padding-right:7%;
+}
+
+#icons-img {
+  z-index: 0;
+  width:700%;
+  align-self: flex-end;
+  right: 50%;
+  position: absolute;
+  margin-bottom: 0px;
+}
+
+.transform-active {
+  font-family: 'Open Sans', sans-serif;
+  color: rgb(0, 0, 0);
+  margin-top:-300;
+}
+
+.transform {
+  -webkit-transition: all 2s ease;  
+  -moz-transition: all 2s ease;  
+  -o-transition: all 2s ease;  
+  -ms-transition: all 2s ease;  
+  transition: all 2s ease;
+}
+
+/* Animation https://codepen.io/themechills/pen/dMamgG */
+
+@keyframes fadeInUp {
+  from {
+      transform: translate3d(0,40px,0)
+  }
+
+  to {
+      transform: translate3d(0,0,0);
+      opacity: 1
+  }
+}
+
+@-webkit-keyframes fadeInUp {
+  from {
+      transform: translate3d(0,40px,0)
+  }
+
+  to {
+      transform: translate3d(0,0,0);
+      opacity: 1
+  }
+}
+
+.animated {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-fill-mode: both
+}
+
+.animatedFadeInUp {
+  opacity: 0
+}
+
+.fadeInUp {
+  opacity: 0;
+  animation-name: fadeInUp;
+  -webkit-animation-name: fadeInUp;
+}
+
+section {
+  position: absolute;
+  width: 100%;
+  height: 90%
+}
+
+.set {
+  position: relative;
+  width: 100%;
+  height: 40%;
+}
+
+.set div {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.set div:nth-child(1) {
+  z-index: 20;
+  top:-10%;
+  left:80%;
+  animation: animate 5s linear;
+  animation-delay: 0.7s;
+  animation-iteration-count: 1;
+}
+
+.set div:nth-child(2) {
+  z-index: 20;
+  top:-10%;
+  left:85%;
+  animation: animate 3s linear;
+  animation-delay: 0.7s;
+  animation-iteration-count: 1;
+}
+
+.set div:nth-child(3) {
+  z-index: 20;
+  top:-10%;
+  left:90%;
+  animation: animate 6s linear;
+  animation-delay: 0.7s;
+  animation-iteration-count: 1;
+}
+
+@keyframes animate {
+  0% {
+    opacity: 0;
+    top:-10%;
+    transform: translateX(20px) rotate(0deg);
+  }
+  10% {
+    opacity: 1;
+  }
+  20% {
+    transform: translateX(-20px) rotate(45deg);
+  }
+  40% {
+    transform: translateX(-20px) rotate(60deg);
+  }
+  60% {
+    transform: translateX(-20px) rotate(-60deg);
+  }
+  70% {
+    transform: translateX(-20px) rotate(-50deg);
+  }
+  80% {
+    transform: translateX(-20px) rotate(60deg);
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    top:140%;
+  }
+}
+
+#signupheaderbutton {
+  border-radius:20px;
+  margin-top:10px;
+  min-width: 250; 
+}
+
+.navbar {
+  z-index:10;
+}
+
+
+@media screen and (max-width: 768px) {
+  .signup-form {
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .signup-container {
+      width: calc( 100% - 30px);
+      max-width: 100%;
+  }
+}
+
+@media (max-width: 25em) {
+  #signup-btn {
+    display: none;
+  }
+  #headline {
+    font-size: 40px;
+  }
+  #brandname{
+    display: none;
+  }
+  #icons-img {
+    z-index: 0;
+    width: 400px;
+  }
+}
+
+@media (max-width: 40em) {
+  #signup-btn {
+    display: none;
+  }
+  #headline {
+    font-size: 40px;
+  }
+  #icons-img {
+    width: 400px;
+  }
+}
+
+
+@import url("https://p.typekit.net/p.css?s=1&k=vxl7kbh&ht=tk&f=40446.40450&a=33378952&app=typekit&e=css");
+
+@font-face {
+  font-family:"rubik";
+  src:url("https://use.typekit.net/af/9718df/00000000000000003b9b25b3/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff2"),url("https://use.typekit.net/af/9718df/00000000000000003b9b25b3/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff"),url("https://use.typekit.net/af/9718df/00000000000000003b9b25b3/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("opentype");
+  font-display:auto;font-style:normal;font-weight:400;
+}
+
+@font-face {
+  font-family:"rubik";
+  src:url("https://use.typekit.net/af/5c74b2/00000000000000003b9b25b7/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("woff2"),url("https://use.typekit.net/af/5c74b2/00000000000000003b9b25b7/27/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("woff"),url("https://use.typekit.net/af/5c74b2/00000000000000003b9b25b7/27/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3") format("opentype");
+  font-display:auto;font-style:normal;font-weight:700;
+}
+
+.tk-rubik { font-family: "rubik",sans-serif; }
+
+
