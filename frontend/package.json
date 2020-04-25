@@ -1,0 +1,28 @@
+{
+  "name": "toolmatching",
+  "version": "1.0.0",
+  "description": "Welcome to the Toolmatching",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "bootstrap": "^4.4.1",
+    "feather-icons": "^4.28.0"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.26.7",
+    "gulp": "^4.0.2",
+    "gulp-sass": "^4.1.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hija/toolmatching.git"
+  },
+  "author": "Amila Sampath",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/hija/toolmatching.git"
+  },
+  "homepage": "https://github.com/hija/toolmatching.git#readme"
+}
