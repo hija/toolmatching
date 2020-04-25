@@ -1,7 +1,20 @@
 {
-  "categories": {
-    "Communication": "communication.json",
-    "Task Management": "task-management.json",
-    "File Sharing": "file-sharing.json"
-  }
+  "categories": [
+    {
+      "name": "Communication",
+      "data": "communication.json",
+      "endpoint": "communication"
+    },
+
+    {
+      "name": "Task Management",
+      "data": "task-management.json",
+      "endpoint": "task-management"
+    },
+    {
+      "name": "File Sharing",
+      "data": "file-sharing.json",
+      "endpoint": "file-sharing"
+    }
+  ]
 }
