@@ -1,0 +1,39 @@
+{
+  "Questions":
+  [
+    {
+      "id": "price",
+      "type": "number",
+      "min": 0,
+      "max": 1000,
+      "default": 10,
+      "question": "How much are you willing to pay for the service per employee?"
+    },
+    {
+      "id": "eu-server-location",
+      "type": "yes-no",
+      "question": "Does the service need to be hosted in Europe?"
+    },
+    {
+      "id": "business-version",
+      "type": "yes-no",
+      "question": "Is a business version of the service required?",
+      "info": "Business Versions often offer advanced features, such as user management by an admin and easier collaboration"
+    }
+  ],
+  "Tools":
+  [
+    {
+      "name": "Skype",
+      "price": 5,
+      "eu-server-location": true,
+      "business-version": true
+    },
+    {
+      "name": "Jisti",
+      "price": 5,
+      "eu-server-location": true,
+      "business-version": true
+    }
+  ]
+}
