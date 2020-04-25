@@ -47,7 +47,9 @@ def create_app(test_config=None):
         return jsonify(categories_data)
 
     def get_question(category, questionid):
-        return category_data_dict[category]["Questions"][questionid]
+        data = category_data_dict[category]["Questions"][questionid]
+        if data['type'] == 'yes-no':
+            return render_template('YesNo.html', question=data['question'], questionid=questionid)
         #return
 
     def calculate_tool_result():
@@ -100,7 +102,7 @@ def create_app(test_config=None):
             session['question'] = 0
             session['answers'] = dict()
 
-            return jsonify(get_question(session['category'], session['question']))
+            return get_question(session['category'], session['question'])
 
         elif request.values.get('id') and request.values.get('response'):
             ### RESPONSE TO A QUESTION

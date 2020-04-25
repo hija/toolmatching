@@ -3,15 +3,13 @@
   [
     {
       "id": "using-suits",
-      "type": "multiple-choice",
+      "type": "yes-no",
       "question": "Are you already using the following suites? If yes, please select them.",
-      "choices": ["Office 365", "G Suite", "Zoho"]
     },
 	{
       "id": "com-type",
-      "type": "multiple-choice",
+      "type": "yes-no",
       "question": "Which type of communication are you looking for?",
-      "choices": ["Chat", "Video"]
     },
 	{
       "id": "business-type",
