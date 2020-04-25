@@ -107,15 +107,21 @@ def create_app(test_config=None):
         elif request.values.get('id') and request.values.get('response'):
             ### RESPONSE TO A QUESTION
 
-            session['answers'][request.values.get('id')] = request.values.get('response')
+            # response
+            response = request.values.get('response')
+            if response == 'true':
+                response = True
+            elif response == 'false':
+                response = False
+
+            session['answers'][request.values.get('id')] = response
             session['question'] += 1 # Increase current questionnumber
 
             # Check if we are at the end...
             if len(category_data_dict[session['category']]["Questions"]) <= session['question']:
-                calculate_tool_result()
-                return jsonify({'log': 'auswertung'})
+                return calculate_tool_result()
             else:
-                return jsonify(get_question(session['category'], session['question']))
+                return get_question(session['category'], session['question'])
         else:
             print(request.values)
             ### INVALID REQUEST

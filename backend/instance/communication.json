@@ -4,12 +4,12 @@
     {
       "id": "using-suits",
       "type": "yes-no",
-      "question": "Are you already using the following suites? If yes, please select them.",
+      "question": "Are you already using the following suites? If yes, please select them."
     },
 	{
       "id": "com-type",
       "type": "yes-no",
-      "question": "Which type of communication are you looking for?",
+      "question": "Which type of communication are you looking for?"
     },
 	{
       "id": "business-type",
