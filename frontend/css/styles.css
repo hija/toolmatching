@@ -1,7 +1,8 @@
 body {
   margin: 0;
   font-family: 'rubik', sans-serif;
-  background-color: #e9ecef;
+  background-color: #ffffff;
+  overflow-x: hidden;
 }
 
 header {
@@ -31,6 +32,8 @@ h1,h2,h3,h4,h5,h6,p {
   height: 90%;
   padding-bottom: 0;
   z-index: 4;
+  margin-bottom:0px; 
+  background-color: #ffffff;
 }
 
 .container {
@@ -40,6 +43,64 @@ h1,h2,h3,h4,h5,h6,p {
   margin-left: 50px;
   margin-bottom: 70px;
   z-index: 3;
+}
+
+.container-description {
+  background-color: #dbdbdb;
+  z-index: 4;
+  position: relative;
+  margin-top: 90vh;
+}
+
+.container-stepone {
+  background-color: #ffffff;
+  z-index: 4;
+  position: relative;
+}
+
+.text-container {
+  margin-left: 50px;
+  width: 60%;
+  font-size: 20px;
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+
+.text-container-stepone {
+  margin-left: 50px;
+  width: 60%;
+  font-size: 20px;
+  padding-top: 120px;
+  padding-bottom: 120px;
+  float: left;
+}
+
+.picturestep {
+  padding-right: 60px;
+  width:35%;
+  float: right;
+  margin-right: 0;
+  padding-top: 90px;
+}
+
+#step3img {
+  width: 100%;
+  align-self: center;
+}
+
+.footer {
+  width: 100%;
+  align-items: center; 
+}
+
+#steponetext {
+  color:#007bff;
+  font-weight: bold;
+  margin-bottom: 0;
+}
+
+#steponehead {
+  font-size:40px;
 }
 
 #person {
@@ -55,7 +116,7 @@ h1,h2,h3,h4,h5,h6,p {
   align-self: flex-end;
   right: 0px;
   bottom: 100%;
-  padding-right:7%;
+  padding-right:10%;
 }
 
 #icons-img {
@@ -122,84 +183,6 @@ h1,h2,h3,h4,h5,h6,p {
   -webkit-animation-name: fadeInUp;
 }
 
-section {
-  position: absolute;
-  width: 100%;
-  height: 90%
-}
-
-.set {
-  position: relative;
-  width: 100%;
-  height: 40%;
-}
-
-.set div {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-}
-
-.set div:nth-child(1) {
-  z-index: 20;
-  top:-10%;
-  left:80%;
-  animation: animate 5s linear;
-  animation-delay: 0.7s;
-  animation-iteration-count: 1;
-}
-
-.set div:nth-child(2) {
-  z-index: 20;
-  top:-10%;
-  left:85%;
-  animation: animate 3s linear;
-  animation-delay: 0.7s;
-  animation-iteration-count: 1;
-}
-
-.set div:nth-child(3) {
-  z-index: 20;
-  top:-10%;
-  left:90%;
-  animation: animate 6s linear;
-  animation-delay: 0.7s;
-  animation-iteration-count: 1;
-}
-
-@keyframes animate {
-  0% {
-    opacity: 0;
-    top:-10%;
-    transform: translateX(20px) rotate(0deg);
-  }
-  10% {
-    opacity: 1;
-  }
-  20% {
-    transform: translateX(-20px) rotate(45deg);
-  }
-  40% {
-    transform: translateX(-20px) rotate(60deg);
-  }
-  60% {
-    transform: translateX(-20px) rotate(-60deg);
-  }
-  70% {
-    transform: translateX(-20px) rotate(-50deg);
-  }
-  80% {
-    transform: translateX(-20px) rotate(60deg);
-  }
-  90% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-    top:140%;
-  }
-}
-
 #signupheaderbutton {
   border-radius:20px;
   margin-top:10px;
@@ -210,11 +193,68 @@ section {
   z-index:10;
 }
 
+#mainlogo {
+  padding-left: 50px;
+  width: 220px;
+}
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 900px) {
   .signup-form {
     flex-direction: column;
     justify-content: center;
+  }
+  .picturestep {
+    float: left;
+    width: 100%;
+    padding-top:0;
+  }
+  .text-container-stepone {
+    width: 100%;
+    margin-top:20;
+    padding:0;
+  }
+
+  #person {
+    visibility: hidden;
+  }
+
+  .text-container {
+    margin-left: 20px;
+    width: 90%;
+    font-size: 20px;
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+
+  .text-container-stepone {
+    margin-left: 20px;
+    width: 80%;
+    font-size: 20px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    float: left;
+  }
+
+  .container {
+    max-width: 90%;
+  }
+
+  #icons-img {
+    padding-top: 40px;
+    width: 90vw;
+  }
+
+  #steponehead {
+    font-size: 30px;
+  }
+
+  .container {
+    margin-left: 10px;
+    width: 90%;
+  }
+
+  #mainlogo {
+    padding-left: 10px;
   }
 }
 
@@ -226,18 +266,18 @@ section {
 }
 
 @media (max-width: 25em) {
-  #signup-btn {
-    display: none;
-  }
   #headline {
     font-size: 40px;
-  }
-  #brandname{
-    display: none;
   }
   #icons-img {
     z-index: 0;
     width: 400px;
+  }
+  .container {
+    margin-left: 10px;
+  }
+  #mainlogo {
+    padding-left: 10px;
   }
 }
 
