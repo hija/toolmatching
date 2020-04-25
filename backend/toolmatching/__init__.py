@@ -49,15 +49,13 @@ def create_app(test_config=None):
     def get_question(category, questionid):
         data = category_data_dict[category]["Questions"][questionid]
         if data['type'] == 'yes-no':
-            return render_template('YesNo.html', question=data['question'], questionid=questionid)
+            return render_template('YesNo.html', question=data['question'], questionid=data['id'])
         elif data['type'] == 'single-choice':
             return render_template('SingleChoice.html', question=data['question'],
-                                   choices=data['choices'], questionid=questionid)
+                                   choices=data['choices'], questionid=data['id'])
         elif data['type'] == 'number':
             return render_template('Slide.html', question=data['question'],
-                                   min=data['min'], max=data['max'], default=data['default'], questionid=questionid)
-
-        #return
+                                   min=data['min'], max=data['max'], default=data['default'], questionid=data['id'])
 
     def calculate_tool_result():
         tool_points = dict()
@@ -74,19 +72,22 @@ def create_app(test_config=None):
                     if tool_values is list and users_values is list:
                         if bool(set(tool_values) & set(users_values)):
                             tool_points[tool['name']] += 1
-
-                    if tool_values is str and users_values is str:
-                        print('Both are strings')
+                    elif isinstance(tool_values, str) and isinstance(users_values, str):
                         if tool_values == users_values:
                             tool_points[tool['name']] += 1
-
-                    if tool_values is int and users_values is int:
+                    elif isinstance(tool_values, bool) and isinstance(users_values, bool):
+                        if tool_values == users_values:
+                            tool_points[tool['name']] += 1
+                    elif isinstance(tool_values, int) and isinstance(users_values, int):
                         # Get if higher or lower is accepted
                         entry = [x for x in category_data['Questions'] if x['id'] == attribute][0]
-                        if entry['better'] == 'lower':
-                            pass
-                        elif entry['better'] == 'higher':
-                            pass
+                        if entry['better'] == 'lower' and tool_values <= users_values:
+                            tool_points[tool['name']] += 1
+                        elif entry['better'] == 'higher' and tool_values >= users_values:
+                            tool_points[tool['name']] += 1
+                    else:
+                        print('ATTRIBUTE', attribute, 'TOOL:', type(tool_values), 'USER', type(users_values))
+        print(tool_points)
 
     @app.route('/')
     def show_categories():
@@ -119,6 +120,8 @@ def create_app(test_config=None):
                 response = True
             elif response == 'false':
                 response = False
+            elif response.isdigit():
+                response = int(response)
 
             session['answers'][request.values.get('id')] = response
             session['question'] += 1 # Increase current questionnumber

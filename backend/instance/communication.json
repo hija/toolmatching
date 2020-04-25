@@ -8,10 +8,9 @@
       "choices": ["G Suite", "Office 365", "Zoho"]
     },
 	{
-      "id": "com-type",
-      "type": "multiple-choice",
-      "question": "Which type of communication are you looking for?",
-      "choices": ["Video", "Chat"]
+      "id": "video",
+      "type": "yes-no",
+      "question": "Is Video required for your use case?"
     },
 	{
       "id": "business-type",
@@ -25,24 +24,32 @@
       "question": "How many users need to be in one call at the same time?",
       "min": 1,
 	  "max": 1000,
-      "default": 100
+      "default": 100,
+      "better": "higher"
     }
   ],
   "Tools":
   [
     {
       "name": "Google Drive",
-      "using-suits": "G Suite"
+      "using-suits": "G Suite",
+      "video": true,
+      "business-type": "Enterprise",
+      "user-number": 1000
     },
     {
       "name": "Microsoft Teams",
       "using-suits": "Office 365",
-	  "com-type": ["Video", "Chat"]
+      "video": true,
+      "business-type": "Enterprise",
+      "user-number": 500
     },
     {
       "name": "Zoho Meeting",
       "using-suits": "Zoho",
-	  "com-type": ["Video"]
+      "video": true,
+      "business-type": "SME",
+      "user-number": 100
     }
   ]
 }
