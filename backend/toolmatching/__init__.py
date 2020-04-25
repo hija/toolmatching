@@ -32,7 +32,7 @@ def create_app(test_config=None):
     category_data_dict = dict()
     for category in questionnaire_categories_data['categories']:
         with open(os.path.join(app.instance_path, category['data'])) as data:
-            category_data_dict[category['name']] = json.load(data)
+            category_data_dict[category['endpoint']] = json.load(data)
 
     # a simple page that says hello
     @app.route('/hello')
@@ -47,22 +47,34 @@ def create_app(test_config=None):
         return jsonify(categories_data)
 
     def get_question(category, questionid):
-        return
+        return category_data_dict[category]["Questions"][questionid]
+        #return
 
     @app.route('/questionnaire', methods=['POST'])
     def process_questionnaire():
         ## Check if questionnaire catergory exists --> Otherwise return error
         if request.values.get('category'):
+
             # This is just once called at the beginning --> We reset the session
             session.clear()
+
             category = request.values.get('category')
             if not(any(category_data['endpoint'] == category for category_data in questionnaire_categories_data['categories'])):
                 return jsonify({'error': 'Unknown category. Please restart. In the worst case, please choose another category.'})
-            session['category'] = request.value.get('category')
+
+            # Initialize Data
+            session['category'] = category
             session['question'] = 0
+            session['answers'] = dict()
+
+            return jsonify(get_question(session['category'], session['question']))
+
         elif request.values.get('id') and request.values.get('response'):
-            return jsonify({'text': 'SAVING'})
+            session['answers'][id] = request.values.get('response')
             session['question'] += 1 # Increase current questionnumber
+
+            # Check if we are at the end...
+            return jsonify(get_question(session['category'], session['question']))
         else:
             return jsonify({'error': 'Invalid request'})
     return app
