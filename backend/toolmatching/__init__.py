@@ -53,6 +53,10 @@ def create_app(test_config=None):
         elif data['type'] == 'single-choice':
             return render_template('SingleChoice.html', question=data['question'],
                                    choices=data['choices'], questionid=questionid)
+        elif data['type'] == 'number':
+            return render_template('Slide.html', question=data['question'],
+                                   min=data['min'], max=data['max'], default=data['default'], questionid=questionid)
+
         #return
 
     def calculate_tool_result():
