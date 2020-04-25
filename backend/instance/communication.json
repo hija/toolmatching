@@ -4,8 +4,27 @@
     {
       "id": "using-suits",
       "type": "multiple-choice",
-      "question": "Are you already using one of the following suites?",
+      "question": "Are you already using the following suites? If yes, please select them.",
       "choices": ["Office 365", "G Suite", "Zoho"]
+    },
+	{
+      "id": "com-type",
+      "type": "multiple-choice",
+      "question": "Which type of communication are you looking for?",
+      "choices": ["Chat", "Video"]
+    },
+	{
+      "id": "business-type",
+      "type": "multiple-choice",
+      "question": "Which type of business will this tool be used for?",
+      "choices": ["Individual", "SME", "Enterprise"]
+    },
+	{
+      "id": "user-number",
+      "type": "number",
+      "question": "How many users need to be in one call at the same time?",
+      "min": 1,
+	  "max": 5000
     }
   ],
   "Tools":
@@ -15,12 +34,109 @@
       "using-suits": ["G Suite"]
     },
     {
-      "name": "Microsoft Office 365",
-      "using-suits": ["Office 365"]
+      "name": "Microsoft Teams",
+      "using-suits": ["Office 365"],
+	  "com-type": ["Video"],
+	  "com-type": ["Chat"]
     },
     {
-      "name": "Zoho",
-      "using-suits": ["Zoho"]
+      "name": "Zoho Meeting",
+      "using-suits": ["Zoho"],
+	  "com-type": ["Video"]
+    },
+	{
+      "name": "Zoho Cliq",
+      "using-suits": ["Zoho"],
+	  "com-type": ["Video"]
+    },
+	{
+      "name": "GoToMeeting",
+      "com-type": ["Video"],
+	  "user-number": 3000
+    },
+	{
+      "name": "Zoom",
+      "com-type": ["Video"],
+	  "user-number": 1000
+    },
+	{
+      "name": "Bluejeans",
+      "com-type": ["Video"],
+	  "user-number": 100
+    },
+	{
+      "name": "Whereby",
+      "com-type": ["Video"],
+	  "user-number": 50
+    },
+	{
+      "name": "Google Meet",
+      "com-type": ["Video"],
+	  "user-number": 250
+    },
+	{
+      "name": "join.me",
+      "com-type": ["Video"],
+	  "user-number": 250
+    },
+	{
+      "name": "Skype",
+      "com-type": ["Video"],
+	  "user-number": 50
+    },
+	{
+      "name": "Cisco Webex",
+      "com-type": ["Video"],
+	  "user-number": 200
+    },
+	{
+      "name": "UberConference",
+      "com-type": ["Video"]
+    },
+	{
+      "name": "Jitsi",
+      "com-type": ["Video"]
+    },
+	{
+      "name": "Slack",
+      "com-type": ["Video"],
+	  "com-type": ["Chat"]
+    },
+	{
+      "name": "Workplace by Facebook",
+      "com-type": ["Video"],
+	  "com-type": ["Chat"]
+    },
+	{
+      "name": "Flock",
+      "com-type": ["Video"],
+	  "com-type": ["Chat"]
+    },
+	{
+      "name": "Chanty",
+      "com-type": ["Video"],
+	  "com-type": ["Chat"]
+    },
+	{
+      "name": "Beekeeper",
+      "com-type": ["Video"],
+	  "com-type": ["Chat"]
+    },
+	{
+      "name": "Blink",
+      "com-type": ["Video"],
+	  "com-type": ["Chat"]
+    },
+	{
+      "name": "Fleep",
+	  "com-type": ["Chat"]
+    },
+	{
+      "name": "Rocket Chat",
+	  "com-type": ["Chat"]
     }
   ]
 }
+
+
+
