@@ -72,6 +72,14 @@ def create_app(test_config=None):
                         if tool_values == users_values:
                             tool_points[tool['name']] += 1
 
+                    if tool_values is int and users_values is int:
+                        # Get if higher or lower is accepted
+                        entry = [x for x in category_data['Questions'] if x['id'] == attribute][0]
+                        if entry['better'] == 'lower':
+                            pass
+                        elif entry['better'] == 'higher':
+                            pass
+
     @app.route('/questionnaire', methods=['POST'])
     def process_questionnaire():
         ## Check if questionnaire catergory exists --> Otherwise return error
