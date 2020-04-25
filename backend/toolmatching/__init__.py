@@ -1,7 +1,7 @@
 import os
 import json
 
-from flask import Flask, jsonify, session, request
+from flask import Flask, jsonify, session, request, render_template
 
 
 def create_app(test_config=None):
@@ -79,6 +79,10 @@ def create_app(test_config=None):
                             pass
                         elif entry['better'] == 'higher':
                             pass
+
+    @app.route('/')
+    def show_categories():
+        return render_template('categories.html')
 
     @app.route('/questionnaire', methods=['POST'])
     def process_questionnaire():
