@@ -50,11 +50,13 @@ def create_app(test_config=None):
         return category_data_dict[category]["Questions"][questionid]
         #return
 
+    def calculate_tool_result():
+        pass
+
     @app.route('/questionnaire', methods=['POST'])
     def process_questionnaire():
         ## Check if questionnaire catergory exists --> Otherwise return error
         if request.values.get('category'):
-
             # This is just once called at the beginning --> We reset the session
             session.clear()
 
@@ -70,11 +72,18 @@ def create_app(test_config=None):
             return jsonify(get_question(session['category'], session['question']))
 
         elif request.values.get('id') and request.values.get('response'):
-            session['answers'][id] = request.values.get('response')
+            ### RESPONSE TO A QUESTION
+
+            session['answers'][request.values.get('id')] = request.values.get('response')
             session['question'] += 1 # Increase current questionnumber
 
             # Check if we are at the end...
-            return jsonify(get_question(session['category'], session['question']))
+            if len(category_data_dict[session['category']]["Questions"]) <= session['question']:
+                return jsonify({'log': 'auswertung'})
+            else:
+                return jsonify(get_question(session['category'], session['question']))
         else:
+            print(request.values)
+            ### INVALID REQUEST
             return jsonify({'error': 'Invalid request'})
     return app
