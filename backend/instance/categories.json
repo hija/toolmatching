@@ -1,0 +1,7 @@
+{
+  "categories": {
+    "Communication": "communication.json",
+    "Task Management": "task-management.json",
+    "File Sharing": "file-sharing.json"
+  }
+}

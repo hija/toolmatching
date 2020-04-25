@@ -7,7 +7,7 @@ def create_app(test_config=None):
     app = Flask(__name__, instance_relative_config=True)
     app.config.from_mapping(
         SECRET_KEY='dev',
-        QUESTION_TOOLS_ASSIGNMENT=os.path.join(app.instance_path, 'questions_tools.json')
+        QUESTIONNAIRE_CATEGORIES=os.path.join(app.instance_path, 'categories.json')
     )
 
     if test_config is None:
