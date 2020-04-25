@@ -7219,6 +7219,9 @@ body {
 /*
  * Cover
  */
+.cover {
+  padding-top: 0 !important; }
+
 .cover .btn-lg, .cover .btn-group-lg > .btn {
   padding: .75rem 1.25rem;
   font-weight: 700; }
@@ -7227,7 +7230,18 @@ body {
  * Footer
  */
 .mastfoot {
-  background-color: #F2F2F2; }
+  background-color: #F2F2F2;
+  text-align: left;
+  font: 20px/26px Rubik;
+  padding: 20px;
+  letter-spacing: 0.4px;
+  color: #000000;
+  padding: 20px 0; }
+  .mastfoot p {
+    margin: 0;
+    padding: 0;
+    padding-left: 3rem !important;
+    padding-right: 3rem !important; }
 
 /* Home */
 .home .home-main-wrap {
@@ -7252,7 +7266,33 @@ body {
 
 /* Questionnaire */
 .heading {
-  font: Regular 80px/95px Rubik;
+  font: 80px/95px Rubik !important;
   letter-spacing: 0px;
   color: #000000;
   font-weight: 400; }
+
+.questionnaire .col-sm > div, .questionnaire .col-sm > a {
+  display: block;
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+  box-shadow: 0px 5px 20px #0000000D;
+  border-radius: 20px;
+  opacity: 1;
+  text-align: center;
+  padding: 20px; }
+
+.questionnaire .col-sm > a:hover, .questionnaire .col-sm > a.selected {
+  background-color: #EFF6FE;
+  text-decoration: none; }
+
+.questionnaire .lead {
+  margin-top: 100px;
+  text-align: right; }
+  .questionnaire .lead a {
+    font: 20px/26px Rubik;
+    font-weight: 900;
+    text-align: center;
+    letter-spacing: 0.4px;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    padding-left: 50px;
+    padding-right: 50px; }
