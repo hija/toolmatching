@@ -152,11 +152,11 @@ body {
 			font: 20px/24px Rubik; letter-spacing: 0.4px; text-transform: uppercase; font-weight: 900;
 			&:hover { color: #056CF2; text-decoration: none; }
 		}
-		.back { a { padding: 20px 20px 20px 0;
+		.back { a { padding: 20px 20px 40px 0;
 				svg { position: relative; top: -2px; margin-right: 10px; display: inline-block; } 
 			}
 		}
-		.continue { a { padding: 20px 0 20px 20px;
+		.continue { a { padding: 20px 0 40px 20px;
 				svg {position: relative; top: -2px; margin-left: 10px; display: inline-block; } 
 			}
 		}
