@@ -138,7 +138,29 @@ body {
 	letter-spacing: 0.4px;
 	color: #000000;
 	padding: 20px 0;
+	&.no_bg { background-color: #FFF; }
 	p { margin: 0; padding: 0; padding-left: 3rem !important; padding-right: 3rem !important;}
+
+	.nav { display: flex; justify-content: space-between; background-color: #FFF;
+		.back { text-align: left;
+			font: 20px/26px Rubik; font-weight: 900;
+			letter-spacing: 0.4px;
+			color: #000000;
+			text-transform: uppercase;
+		}
+		a { color: #000;
+			font: 20px/24px Rubik; letter-spacing: 0.4px; text-transform: uppercase; font-weight: 900;
+			&:hover { color: #056CF2; text-decoration: none; }
+		}
+		.back { a { padding: 20px 20px 20px 0;
+				svg { position: relative; top: -2px; margin-right: 10px; display: inline-block; } 
+			}
+		}
+		.continue { a { padding: 20px 0 20px 20px;
+				svg {position: relative; top: -2px; margin-left: 10px; display: inline-block; } 
+			}
+		}
+	}
 }
 
 
@@ -157,17 +179,19 @@ body {
 
 /* Questionnaire */
 
-.heading { font: 80px/95px Rubik !important; letter-spacing: 0px; color: #000000; font-weight: 400; }
+.heading { font: 60px/95px Rubik !important; letter-spacing: 0px; color: #000000; font-weight: 400; }
 
 .questionnaire {
-	.col-sm > div, .col-sm > a  { display: block;
-		background: #FFFFFF 0% 0% no-repeat padding-box;
-		box-shadow: 0px 5px 20px #0000000D;
-		border-radius: 20px;
-		opacity: 1; text-align: center; padding: 20px;
-	}
-	.col-sm > a:hover, .col-sm > a.selected {
-		background-color: #EFF6FE; text-decoration: none;
+	.categories {
+		.col-sm > div, .col-sm > a  { display: block;
+			background: #FFFFFF 0% 0% no-repeat padding-box;
+			box-shadow: 0px 5px 20px #0000000D;
+			border-radius: 20px;
+			opacity: 1; text-align: center; padding: 20px;
+		}
+		.col-sm > a:hover, .col-sm > a.selected {
+			background-color: #EFF6FE; text-decoration: none;
+		}
 	}
 
 	.lead {
@@ -179,6 +203,57 @@ body {
 			text-transform: uppercase; padding-left: 50px; padding-right: 50px; 
 		}
 	}
+
+}
+
+
+.radio {
+  width: 100%;
+  text-align: left;
+  h1 {
+    color: #FFF;
+  }
+
+  .box {
+    width: 415px;
+    background-color: #FFF;
+    transition: all 250ms ease;
+    will-change: transition;
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+    position: relative;
+    padding: 24px 0;
+	background: #FFFFFF 0% 0% no-repeat padding-box;
+	box-shadow: 0px 5px 20px #0000000D;
+	border-radius: 20px;
+	text-align: center;
+font: 20px/24px Rubik; font-weight: 900;
+letter-spacing: 0.4px;
+text-transform: uppercase;
+	svg { stroke:#000; color: #000; }
+
+    &:active{
+      transform: translateY(10px);
+    }
+  }
+
+  input[type="radio"] {
+    display: none;
+    &:checked {
+      + .box {
+        background-color: #056CF2;
+        color: #FFF;
+        svg { stroke:#FFF; color: #FFF }
+      }
+    }
+  }
+
+  .yes {
+  }
+  .no {
+  	svg {  transform: rotate(180deg); }
+  }
 }
 
 
