@@ -73,6 +73,7 @@ h1,h2,h3,h4,h5,h6,p {
   padding-top: 120px;
   padding-bottom: 120px;
   float: left;
+  visibility: hidden;
 }
 
 .picturestep {
@@ -181,6 +182,7 @@ h1,h2,h3,h4,h5,h6,p {
   opacity: 0;
   animation-name: fadeInUp;
   -webkit-animation-name: fadeInUp;
+  visibility: visible !important; 
 }
 
 #signupheaderbutton {
@@ -265,13 +267,12 @@ h1,h2,h3,h4,h5,h6,p {
   }
 }
 
-@media (max-width: 25em) {
+@media (max-width: 400px) {
   #headline {
     font-size: 40px;
   }
   #icons-img {
-    z-index: 0;
-    width: 400px;
+    width: 100vw;
   }
   .container {
     margin-left: 10px;
