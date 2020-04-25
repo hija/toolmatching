@@ -51,7 +51,26 @@ def create_app(test_config=None):
         #return
 
     def calculate_tool_result():
-        pass
+        tool_points = dict()
+        category_data = category_data_dict[session['category']]
+
+        tool_points = dict()
+        for tool in category_data["Tools"]:
+            tool_points[tool['name']] = 0
+            for attribute in tool:
+                if attribute in session['answers']:
+                    tool_values = tool[attribute]
+                    users_values = session['answers'][attribute]
+
+                    if tool_values is list and users_values is list:
+                        print('Both are lists')
+                        if bool(set(tool_values) & set(users_values)):
+                            tool_points[tool['name']] += 1
+
+                    if tool_values is str and users_values is str:
+                        print('Both are strings')
+                        if tool_values == users_values:
+                            tool_points[tool['name']] += 1
 
     @app.route('/questionnaire', methods=['POST'])
     def process_questionnaire():
@@ -79,6 +98,7 @@ def create_app(test_config=None):
 
             # Check if we are at the end...
             if len(category_data_dict[session['category']]["Questions"]) <= session['question']:
+                calculate_tool_result()
                 return jsonify({'log': 'auswertung'})
             else:
                 return jsonify(get_question(session['category'], session['question']))
