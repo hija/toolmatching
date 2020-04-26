@@ -195,11 +195,15 @@ body {
 			opacity: 1; text-align: center; padding: 20px;
 		}
 		.soon { color: #D9D9D9; } 
+		.selected_svg { display: none; }
 		.col-sm > a:hover, .col-sm > a.selected {
-			background-color: #EFF6FE; text-decoration: none;
+			background-color: #056CF2; text-decoration: none; color: #FFF;
+			svg { display: none; }
+			svg.selected_svg { display: inline-block; }
 		}
+		
 	}
-
+	
 	.lead {
 		margin-top: 80px; text-align: right; 
 		a {

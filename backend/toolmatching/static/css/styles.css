@@ -7326,9 +7326,17 @@ body {
 .questionnaire .categories .soon {
   color: #D9D9D9; }
 
+.questionnaire .categories .selected_svg {
+  display: none; }
+
 .questionnaire .categories .col-sm > a:hover, .questionnaire .categories .col-sm > a.selected {
-  background-color: #EFF6FE;
-  text-decoration: none; }
+  background-color: #056CF2;
+  text-decoration: none;
+  color: #FFF; }
+  .questionnaire .categories .col-sm > a:hover svg, .questionnaire .categories .col-sm > a.selected svg {
+    display: none; }
+  .questionnaire .categories .col-sm > a:hover svg.selected_svg, .questionnaire .categories .col-sm > a.selected svg.selected_svg {
+    display: inline-block; }
 
 .questionnaire .lead {
   margin-top: 80px;
