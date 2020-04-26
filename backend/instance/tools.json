@@ -24,6 +24,18 @@
           {
             "name": "Trello",
             "icon": "static/icons/trello.png"
+          },
+          {
+            "name": "Microsoft OneDrive",
+            "icon": "static/icons/onedrive.png"
+          },
+          {
+            "name": "WeTransfer",
+            "icon": "static/icons/wetransfer.png"
+          },
+          {
+            "name": "Box",
+            "icon": "static/icons/box.png"
           }
         ]
 }

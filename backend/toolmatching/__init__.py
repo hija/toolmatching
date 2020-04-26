@@ -64,7 +64,8 @@ def create_app(test_config=None):
                                    choices=data['choices'], questionid=data['id'])
         elif data['type'] == 'number':
             return render_template('Slide.html', question=data['question'],
-                                   min=data['min'], max=data['max'], default=data['default'], questionid=data['id'])
+                                   min=data['min'], max=data['max'], step=data['step'],
+                                   default=data['default'], questionid=data['id'])
 
     def calculate_tool_result():
         tool_points = dict()
@@ -129,21 +130,23 @@ def create_app(test_config=None):
 
             return get_question(session['category'], session['question'])
 
-        elif request.values.get('id') and request.values.get('response'):
+        elif request.values.get('id'): # and request.values.get('response'):
             ### RESPONSE TO A QUESTION
 
-            # response
-            response = request.values.get('response')
-            if response == 'true':
-                response = True
-            elif response == 'false':
-                response = False
-            elif response.isdigit():
-                response = int(response)
-            elif ';' in response:
-                response = response.split(';')
+            if request.values.get('response'):
+                # response
+                response = request.values.get('response')
+                if response == 'true':
+                    response = True
+                elif response == 'false':
+                    response = False
+                elif response.isdigit():
+                    response = int(response)
+                elif ';' in response:
+                    response = response.split(';')
 
-            session['answers'][request.values.get('id')] = response
+                session['answers'][request.values.get('id')] = response
+
             session['question'] += 1  # Increase current questionnumber
 
             # Check if we are at the end...

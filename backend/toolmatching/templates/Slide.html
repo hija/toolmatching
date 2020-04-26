@@ -18,18 +18,32 @@
   <main role="main" class="inner cover p-5 pt-0 pb-0">
     <div class="text-left">
       <h1 class="heading pt-3 pb-5">{{question}}</h1>
-    </div>
-      <div class="text-center">
-        <div class="container">
-        <div class="row">
-            <div class="col">
-                <input type="range" id="ranger" name="rangeInput" min="{{min}}" max="{{max}}" value="{{default}}" step="100" onchange="document.getElementById('textInput').value=this.value;">
-                <input type="text" class="form-control-plaintext text-center" id="textInput" value="{{default}}">
-            </div>
+      <div class="container">
+        <div class="row mb-3">
+          <div class="col-sm">
+
+          <!-- rangeslider.js | https://github.com/andreruffert/rangeslider.js -->
+            <form oninput="output.value = Math.round(range.valueAsNumber)">
+              <div class="range">
+                <input name="range" type="range" min="{{min}}" max="{{max}}" step="{{step}}" value="{{default}}">
+                <div class="d-flex justify-content-between range_values">
+                  <div class="min">{{min}}</div>
+                  <div class="max">{{max}}</div>
+                </div>
+                <div class="range-output">
+                  <output class="output" name="output" for="range">
+                    {{default}}
+                  </output>
+                </div>
+              </div>
+            </form>
+
+          </div>
         </div>
       </div>
     </div>
   </main>
+
   <footer class="mastfoot mt-auto no_bg">
     <div class="inner">
       <div class="nav pl-5 pr-5">
