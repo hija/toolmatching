@@ -64,7 +64,8 @@ def create_app(test_config=None):
                                    choices=data['choices'], questionid=data['id'])
         elif data['type'] == 'number':
             return render_template('Slide.html', question=data['question'],
-                                   min=data['min'], max=data['max'], default=data['default'], questionid=data['id'])
+                                   min=data['min'], max=data['max'], step=data['step'],
+                                   default=data['default'], questionid=data['id'])
 
     def calculate_tool_result():
         tool_points = dict()
