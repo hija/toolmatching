@@ -305,10 +305,15 @@ body {
 		font-weight: 900;
 		letter-spacing: 0.4px;
 		color: #000000;
+		margin-left: 10px;
 
 		text-transform: uppercase;
+		&::before, &::after {
+			left: -2rem;
+		}
 	}
 
+	.custom-control-input { margin-right: 20px; }
 	.custom-control-input:checked + .custom-control-label { color: #056CF2 !important; }
 	.custom-control-label::before {
 		border: #000 solid 3px;

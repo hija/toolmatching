@@ -7417,7 +7417,13 @@ body {
   font-weight: 900;
   letter-spacing: 0.4px;
   color: #000000;
+  margin-left: 10px;
   text-transform: uppercase; }
+  .single_choice .custom-control-label::before, .single_choice .custom-control-label::after {
+    left: -2rem; }
+
+.single_choice .custom-control-input {
+  margin-right: 20px; }
 
 .single_choice .custom-control-input:checked + .custom-control-label {
   color: #056CF2 !important; }
