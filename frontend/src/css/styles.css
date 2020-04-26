@@ -7321,6 +7321,9 @@ body {
   text-align: center;
   padding: 20px; }
 
+.questionnaire .categories .soon {
+  color: #D9D9D9; }
+
 .questionnaire .categories .col-sm > a:hover, .questionnaire .categories .col-sm > a.selected {
   background-color: #EFF6FE;
   text-decoration: none; }
