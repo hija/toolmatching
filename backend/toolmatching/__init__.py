@@ -32,7 +32,7 @@ def create_app(test_config=None):
 
     category_data_dict = dict()
     for category in questionnaire_categories_data['categories']:
-        with open(os.path.join(app.instance_path, category['data'])) as data:
+        with open(os.path.join(app.instance_path, category['data']), encoding='utf-8') as data:
             category_data_dict[category['endpoint']] = json.load(data)
 
     print(category_data_dict)
