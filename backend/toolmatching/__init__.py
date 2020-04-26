@@ -1,3 +1,4 @@
+import operator
 import os
 import json
 
@@ -33,6 +34,9 @@ def create_app(test_config=None):
     for category in questionnaire_categories_data['categories']:
         with open(os.path.join(app.instance_path, category['data'])) as data:
             category_data_dict[category['endpoint']] = json.load(data)
+
+    with open(os.path.join(app.instance_path, 'tools.json')) as data:
+        tool_data = json.load(data)['Tools']
 
     # a simple page that says hello
     @app.route('/hello')
@@ -87,7 +91,15 @@ def create_app(test_config=None):
                             tool_points[tool['name']] += 1
                     else:
                         print('ATTRIBUTE', attribute, 'TOOL:', type(tool_values), 'USER', type(users_values))
-        print(tool_points)
+
+        sorted_tool_points = dict(sorted(tool_points.items(), key=operator.itemgetter(1), reverse=True))
+        first_three_winners = list(sorted_tool_points.keys())[0:3]
+
+        icons = list(map(lambda x: [d['icon'] for d in tool_data if d['name'] == x][0], first_three_winners))
+
+        return render_template('Results.html', first_name=first_three_winners[0], first_image=icons[0],
+                               second_name=first_three_winners[1], second_image=icons[1],
+                               third_name=first_three_winners[2], third_image=icons[2])
 
     @app.route('/')
     def show_categories():
@@ -101,8 +113,10 @@ def create_app(test_config=None):
             session.clear()
 
             category = request.values.get('category')
-            if not(any(category_data['endpoint'] == category for category_data in questionnaire_categories_data['categories'])):
-                return jsonify({'error': 'Unknown category. Please restart. In the worst case, please choose another category.'})
+            if not (any(category_data['endpoint'] == category for category_data in
+                        questionnaire_categories_data['categories'])):
+                return jsonify(
+                    {'error': 'Unknown category. Please restart. In the worst case, please choose another category.'})
 
             # Initialize Data
             session['category'] = category
@@ -124,7 +138,7 @@ def create_app(test_config=None):
                 response = int(response)
 
             session['answers'][request.values.get('id')] = response
-            session['question'] += 1 # Increase current questionnumber
+            session['question'] += 1  # Increase current questionnumber
 
             # Check if we are at the end...
             if len(category_data_dict[session['category']]["Questions"]) <= session['question']:
@@ -134,4 +148,5 @@ def create_app(test_config=None):
         else:
             ### INVALID REQUEST
             return jsonify({'error': 'Invalid request'})
+
     return app
