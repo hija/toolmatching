@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/results-styles.css') }}">
+
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,700;1,300&display=swap" rel="stylesheet">
+
+
+    <title>Tool Matching</title>
+</head>
+
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+
+
+<body class="text-center questionnaire">
+    
+<div class="cover-container d-flex w-100 h-100 pt-5 mx-auto flex-column">
+  <header class="masthead pl-5 pr-5">
+    <div class="inner">
+        <h3 class="masthead-brand"><img id="mainlogo" src="{{ url_for('static', filename='images/logo.png') }}" alt="Logo" width="140"></h3>
+      <!-- <nav class="nav nav-masthead justify-content-center">
+        <a class="nav-link active" href="#">Home</a>
+        <a class="nav-link" href="#">Features</a>
+        <a class="nav-link" href="#">Contact</a>
+      </nav>
+    -->
+    </div>
+  </header>
+
+    <main role="main" class="inner cover p-5 pt-0">
+        <div class="text-left">
+            <h1 class="heading pt-3 pb-5">Your top matches:</h1>
+            <div class="container categories">
+                <div class="row mb-3">
+                <div class="col-sm custom-col">
+                    <div class="card">
+                        <div class="container"> 
+                          <div class="cardnumber">#1</div> 
+                          <div class="getbutton"><button type="button" id="getbutton-first" onclick="" class="btn btn-primary btn-sm">GET TOOL</button></div> 
+                        </div>
+                    </div>
+                    <div class="card detailscard">
+                        <div class="container tooldetailscard"> 
+                            <div id="tool-logo-first" class="logo-tool"><img class="logo-img" src="{{first_image}}" alt="logo-one"></div>
+                            <div class="toolname"><div id="tool-name-first" class="tooltext">{{first_name}}</div> <a style="font-size:smaller;" href="https://euvsvirus.org/">Visit website</a></div>
+                        </div>
+                        <div class="border-top my-3"></div>
+                        <div class="container tooldetailscard pricedetails"> 
+                            <div class="category-text" style="font-size:small">Starting at</div>  
+                            <div id="price-first" class="category-text" style="font-size:x-large; font-weight: bolder;">5 €</div> 
+                            <div class="category-text" style="font-size:small">per user per month</div>  
+                        </div>
+
+                        <div class="container tooldetailscard pricedetails" style="padding-top:20px;"> 
+                            <div id="trial-first" class="category-text" style="font-size:x-large; font-weight: bolder;">1 month</div> 
+                            <div class="category-text" style="font-size:small">free trial</div>  
+                        </div>
+
+                        <div class="container tooldetailscard pricedetails" style="padding-top:20px;"> 
+                            <div class="category-text" style="font-size:small">Maximum users</div> 
+                            <div id="max-users-first" class="category-text" style="font-size:x-large; font-weight: bolder;">500</div>  
+                        </div>
+
+                        <div class="container tooldetailscard" style="padding-top:20px; padding-bottom:20px;"> 
+                            <div class="logo-tool" style="width:30px; padding-left:10px;"><img class="logo-img" src="{{ url_for('static', filename='images/smartphone.svg') }}" alt="logo-one"></div>
+                            <div class="toolname"><div id="mobile-app-first" style="font-size:small; margin-left:10px;">Mobile app available</div></div>  
+                        </div>
+
+                        <div style="padding-left:20px;">
+                            <button type="button" class="btn btn-sm btn-primary btn-lg btn-block" style="padding-left:20px;">More Info</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm">
+                    <div class="card">
+                        <div class="container"> 
+                            <div class="cardnumber">#2</div> 
+                            <div class="getbutton"><button type="button" id="getbutton-second" onclick="" class="btn btn-primary btn-sm">GET TOOL</button></div> 
+                        </div>
+                    </div>
+                    <div class="card detailscard">
+                        <div class="container tooldetailscard"> 
+                            <div id="tool-logo-second" class="logo-tool"><img class="logo-img" src="{{second_image}}" alt="logo-one"></div>
+                            <div class="toolname"><div id="tool-name-first" class="tooltext">{{second_name}}</div> <a style="font-size:smaller;" href="https://euvsvirus.org/">Visit website</a></div>
+                        </div>
+                        <div class="border-top my-3"></div>
+                        <div class="container tooldetailscard pricedetails"> 
+                            <div class="category-text" style="font-size:small">Starting at</div>  
+                            <div id="price-second" class="category-text" style="font-size:x-large; font-weight: bolder;">5 €</div> 
+                            <div class="category-text" style="font-size:small">per user per month</div>  
+                        </div>
+
+                        <div class="container tooldetailscard pricedetails" style="padding-top:20px;"> 
+                            <div id="trial-second" class="category-text" style="font-size:x-large; font-weight: bolder;">1 month</div> 
+                            <div class="category-text" style="font-size:small">free trial</div>  
+                        </div>
+
+                        <div class="container tooldetailscard pricedetails" style="padding-top:20px;"> 
+                            <div class="category-text" style="font-size:small">Maximum users</div> 
+                            <div id="max-users-second" class="category-text" style="font-size:x-large; font-weight: bolder;">500</div>  
+                        </div>
+
+                        <div class="container tooldetailscard" style="padding-top:20px; padding-bottom:20px;"> 
+                            <div class="logo-tool" style="width:30px; padding-left:10px;"><img class="logo-img" src="{{ url_for('static', filename='images/smartphone.svg') }}" alt="logo-one"></div>
+                            <div class="toolname"><div id="mobile-app-second" style="font-size:small; margin-left:10px;">Mobile app available</div></div>  
+                        </div>
+
+                        <div style="padding-left:20px;">
+                            <button type="button" class="btn btn-sm btn-primary btn-lg btn-block" style="padding-left:20px;">More Info</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm">
+                    <div class="card">
+                        <div class="container"> 
+                            <div class="cardnumber">#3</div> 
+                            <div class="getbutton"><button type="button" id="getbutton-third" onclick="" class="btn btn-primary btn-sm">GET TOOL</button></div> 
+                        </div>
+                    </div>
+                    <div class="card detailscard">
+                        <div class="container tooldetailscard"> 
+                            <div id="tool-logo-third" class="logo-tool"><img class="logo-img" src="{{third_image}}" alt="logo-one"></div>
+                            <div class="toolname"><div id="tool-name-first" class="tooltext">{{third_name}}</div> <a style="font-size:smaller;" href="https://euvsvirus.org/">Visit website</a></div>
+                        </div>
+                        <div class="border-top my-3"></div>
+                        <div class="container tooldetailscard pricedetails"> 
+                            <div class="category-text" style="font-size:small">Starting at</div>  
+                            <div id="price-third" class="category-text" style="font-size:x-large; font-weight: bolder;">5 €</div> 
+                            <div class="category-text" style="font-size:small">per user per month</div>  
+                        </div>
+
+                        <div class="container tooldetailscard pricedetails" style="padding-top:20px;"> 
+                            <div id="trial-third" class="category-text" style="font-size:x-large; font-weight: bolder;">1 month</div> 
+                            <div class="category-text" style="font-size:small">free trial</div>  
+                        </div>
+
+                        <div class="container tooldetailscard pricedetails" style="padding-top:20px;"> 
+                            <div class="category-text" style="font-size:small">Maximum users</div> 
+                            <div id="max-users-third" class="category-text" style="font-size:x-large; font-weight: bolder;">500</div>  
+                        </div>
+
+                        <div class="container tooldetailscard" style="padding-top:20px; padding-bottom:20px;"> 
+                            <div class="logo-tool" style="width:30px; padding-left:10px;"><img class="logo-img" src="{{ url_for('static', filename='images/smartphone.svg') }}" alt="logo-one"></div>
+                            <div class="toolname"><div id="mobile-app-third" style="font-size:small; margin-left:10px;">Mobile app available</div></div>  
+                        </div>
+
+                        <div style="padding-left:20px;">
+                            <button type="button" class="btn btn-sm btn-primary btn-lg btn-block" style="padding-left:20px;">More Info</button>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+        
+
+
+  <footer class="mastfoot mt-auto">
+    <div class="inner text-center">
+        <a href="https://euvsvirus.org/">#EUvsVirus</a>
+    </div>
+  </footer>
+
+</div>
+
+
+{% include 'footer.html' %}
