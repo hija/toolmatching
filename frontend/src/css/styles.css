@@ -7305,7 +7305,7 @@ body {
 
 /* Questionnaire */
 .heading {
-  font: 60px/75px Rubik !important;
+  font: 80px/95px Rubik !important;
   letter-spacing: 0px;
   color: #000000;
   font-weight: 400; }
@@ -7411,6 +7411,13 @@ body {
     border: none !important;
     border-radius: 0;
     margin-right: 10px; }
+
+.single_choice .custom-control-label {
+  font: 20px/30px Rubik;
+  font-weight: 900;
+  letter-spacing: 0.4px;
+  color: #000000;
+  text-transform: uppercase; }
 
 input[type="range"] {
   -webkit-appearance: none;
