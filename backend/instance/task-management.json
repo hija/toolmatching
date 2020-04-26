@@ -1,3 +1,57 @@
 {
-
+  "Questions":
+  [
+    {
+      "id": "business-type",
+      "type": "single-choice",
+      "question": "Which type of business will this tool be used for?",
+      "choices": ["Individual", "SME", "Enterprise"]
+    },
+    {
+      "id": "pay-per-user",
+      "type": "number",
+      "question": "How much are you willing to pay per user per month [€/user/month]?",
+      "min": 0,
+      "max": 20,
+      "default": 5,
+      "better": "lower"
+    },
+    {
+      "id": "using-scrum",
+      "type": "yes-no",
+      "question": "Is your team working with scrum methodologies?"
+    },
+    {
+      "id": "features",
+      "type": "multiple-choice",
+      "question": "Which of the following features do you need?",
+      "choices": ["Gantt", "Kanban", "Time Tracking", "Timeline", "Calendar"]
+    }
+  ],
+  "Tools":
+  [
+    {
+      "name": "Trello",
+      "business-type": "Enterprise",
+      "pay-per-user": 11.55,
+      "using-scrum": true,
+      "features": ["Kanban"]
+    },
+    {
+      "name": "agantty",
+      "business-type": "SME",
+      "pay-per-user": 0,
+      "using-scrum": true,
+      "features": ["Gantt"]
+    },
+    {
+      "name": "monday",
+      "business-type": "SME",
+      "pay-per-user": 9.5,
+      "using-scrum": true,
+      "features": ["Gantt"]
+    }
+  ]
 }
+
+

@@ -12,6 +12,18 @@
           {
             "name": "Zoho Meeting",
             "icon": "static/icons/zoho.png"
+          },
+          {
+            "name": "agantty",
+            "icon": "static/icons/agantty.png"
+          },
+          {
+            "name": "monday",
+            "icon": "static/icons/monday.png"
+          },
+          {
+            "name": "Trello",
+            "icon": "static/icons/trello.png"
           }
         ]
 }
