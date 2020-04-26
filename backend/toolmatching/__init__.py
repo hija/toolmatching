@@ -3,7 +3,7 @@ import os
 import json
 
 from flask import Flask, jsonify, session, request, render_template
-
+from io import open
 
 def create_app(test_config=None):
     # create and configure the app
