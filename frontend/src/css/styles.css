@@ -7352,16 +7352,16 @@ body {
     padding-left: 50px;
     padding-right: 50px; }
 
-.radio, .checkbox, .inputs, .scale {
+.radio, .checkbox, .inputs, .scale, .results {
   width: 100%;
   text-align: left; }
-  .radio h1, .checkbox h1, .inputs h1, .scale h1 {
+  .radio h1, .checkbox h1, .inputs h1, .scale h1, .results h1 {
     color: #FFF; }
-  .radio label, .checkbox label, .inputs label, .scale label {
+  .radio label, .checkbox label, .inputs label, .scale label, .results label {
     width: 100%; }
-  .radio.w_415px .box, .checkbox.w_415px .box, .inputs.w_415px .box, .scale.w_415px .box {
+  .radio.w_415px .box, .checkbox.w_415px .box, .inputs.w_415px .box, .scale.w_415px .box, .results.w_415px .box {
     width: 415px; }
-  .radio .box, .checkbox .box, .inputs .box, .scale .box {
+  .radio .box, .checkbox .box, .inputs .box, .scale .box, .results .box {
     width: 100%;
     background-color: #FFF;
     transition: all 250ms ease;
@@ -7379,42 +7379,51 @@ body {
     font-weight: 900;
     letter-spacing: 0.4px;
     text-transform: uppercase; }
-    .radio .box svg, .checkbox .box svg, .inputs .box svg, .scale .box svg {
+    .radio .box svg, .checkbox .box svg, .inputs .box svg, .scale .box svg, .results .box svg {
       stroke: #000;
       color: #000; }
-    .radio .box:active, .checkbox .box:active, .inputs .box:active, .scale .box:active {
+    .radio .box:active, .checkbox .box:active, .inputs .box:active, .scale .box:active, .results .box:active {
       transform: translateY(10px); }
-    .radio .box.form-input, .checkbox .box.form-input, .inputs .box.form-input, .scale .box.form-input {
+    .radio .box.form-input, .checkbox .box.form-input, .inputs .box.form-input, .scale .box.form-input, .results .box.form-input {
       padding: 12px 0 13px 0; }
-  .radio input[type="radio"], .radio input[type="checkbox"], .checkbox input[type="radio"], .checkbox input[type="checkbox"], .inputs input[type="radio"], .inputs input[type="checkbox"], .scale input[type="radio"], .scale input[type="checkbox"] {
-    display: none; }
-    .radio input[type="radio"]:checked + .box, .radio input[type="checkbox"]:checked + .box, .checkbox input[type="radio"]:checked + .box, .checkbox input[type="checkbox"]:checked + .box, .inputs input[type="radio"]:checked + .box, .inputs input[type="checkbox"]:checked + .box, .scale input[type="radio"]:checked + .box, .scale input[type="checkbox"]:checked + .box {
+    .radio .box:hover, .checkbox .box:hover, .inputs .box:hover, .scale .box:hover, .results .box:hover {
       background-color: #056CF2;
       color: #FFF; }
-      .radio input[type="radio"]:checked + .box svg, .radio input[type="checkbox"]:checked + .box svg, .checkbox input[type="radio"]:checked + .box svg, .checkbox input[type="checkbox"]:checked + .box svg, .inputs input[type="radio"]:checked + .box svg, .inputs input[type="checkbox"]:checked + .box svg, .scale input[type="radio"]:checked + .box svg, .scale input[type="checkbox"]:checked + .box svg {
+  .radio input[type="radio"], .radio input[type="checkbox"], .checkbox input[type="radio"], .checkbox input[type="checkbox"], .inputs input[type="radio"], .inputs input[type="checkbox"], .scale input[type="radio"], .scale input[type="checkbox"], .results input[type="radio"], .results input[type="checkbox"] {
+    display: none; }
+    .radio input[type="radio"]:checked + .box, .radio input[type="checkbox"]:checked + .box, .checkbox input[type="radio"]:checked + .box, .checkbox input[type="checkbox"]:checked + .box, .inputs input[type="radio"]:checked + .box, .inputs input[type="checkbox"]:checked + .box, .scale input[type="radio"]:checked + .box, .scale input[type="checkbox"]:checked + .box, .results input[type="radio"]:checked + .box, .results input[type="checkbox"]:checked + .box {
+      background-color: #056CF2;
+      color: #FFF; }
+      .radio input[type="radio"]:checked + .box svg, .radio input[type="checkbox"]:checked + .box svg, .checkbox input[type="radio"]:checked + .box svg, .checkbox input[type="checkbox"]:checked + .box svg, .inputs input[type="radio"]:checked + .box svg, .inputs input[type="checkbox"]:checked + .box svg, .scale input[type="radio"]:checked + .box svg, .scale input[type="checkbox"]:checked + .box svg, .results input[type="radio"]:checked + .box svg, .results input[type="checkbox"]:checked + .box svg {
         stroke: #FFF;
         color: #FFF; }
-  .radio .no svg, .checkbox .no svg, .inputs .no svg, .scale .no svg {
+  .radio .yes:hover svg, .checkbox .yes:hover svg, .inputs .yes:hover svg, .scale .yes:hover svg, .results .yes:hover svg {
+    stroke: #FFF;
+    color: #FFF; }
+  .radio .no svg, .checkbox .no svg, .inputs .no svg, .scale .no svg, .results .no svg {
     transform: rotate(180deg); }
-  .radio .form-control, .checkbox .form-control, .inputs .form-control, .scale .form-control {
+  .radio .no:hover svg, .checkbox .no:hover svg, .inputs .no:hover svg, .scale .no:hover svg, .results .no:hover svg {
+    stroke: #FFF;
+    color: #FFF; }
+  .radio .form-control, .checkbox .form-control, .inputs .form-control, .scale .form-control, .results .form-control {
     border: none;
     font: 20px/24px Rubik;
     font-weight: 900;
     letter-spacing: 0.4px;
     text-transform: uppercase; }
-    .radio .form-control::placeholder, .checkbox .form-control::placeholder, .inputs .form-control::placeholder, .scale .form-control::placeholder {
+    .radio .form-control::placeholder, .checkbox .form-control::placeholder, .inputs .form-control::placeholder, .scale .form-control::placeholder, .results .form-control::placeholder {
       color: #D9D9D9; }
-    .radio .form-control::placeholder, .checkbox .form-control::placeholder, .inputs .form-control::placeholder, .scale .form-control::placeholder {
+    .radio .form-control::placeholder, .checkbox .form-control::placeholder, .inputs .form-control::placeholder, .scale .form-control::placeholder, .results .form-control::placeholder {
       color: #D9D9D9; }
-    .radio .form-control::placeholder, .checkbox .form-control::placeholder, .inputs .form-control::placeholder, .scale .form-control::placeholder {
+    .radio .form-control::placeholder, .checkbox .form-control::placeholder, .inputs .form-control::placeholder, .scale .form-control::placeholder, .results .form-control::placeholder {
       color: #D9D9D9; }
-    .radio .form-control:focus, .checkbox .form-control:focus, .inputs .form-control:focus, .scale .form-control:focus {
+    .radio .form-control:focus, .checkbox .form-control:focus, .inputs .form-control:focus, .scale .form-control:focus, .results .form-control:focus {
       background-color: #fff;
       border-color: #7ab3fc;
       outline: 0;
       box-shadow: 0 0 0 0 rgba(5, 108, 242, 0);
       border: none !important; }
-  .radio .input-group-text, .checkbox .input-group-text, .inputs .input-group-text, .scale .input-group-text {
+  .radio .input-group-text, .checkbox .input-group-text, .inputs .input-group-text, .scale .input-group-text, .results .input-group-text {
     font-size: 1rem;
     font-weight: 900;
     line-height: 1.5;
@@ -7425,6 +7434,12 @@ body {
     border: none !important;
     border-radius: 0;
     margin-right: 10px; }
+
+.results .box {
+  padding: 0 50px; }
+  .results .box:hover {
+    background-color: #FFF !important;
+    color: #000 !important; }
 
 .single_choice .custom-control-label {
   font: 20px/30px Rubik;

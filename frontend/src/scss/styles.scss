@@ -217,7 +217,7 @@ body {
 }
 
 
-.radio, .checkbox, .inputs, .scale {
+.radio, .checkbox, .inputs, .scale, .results {
   width: 100%;
   text-align: left;
   h1 {
@@ -252,7 +252,10 @@ body {
     &.form-input {
     	padding: 12px 0 13px 0;
     }
+  	&:hover { background-color: #056CF2; color: #FFF; }
   }
+
+
 
   input[type="radio"], input[type="checkbox"] {
     display: none;
@@ -266,9 +269,12 @@ body {
   }
 
   .yes {
+  	&:hover { svg { stroke:#FFF; color: #FFF } }
   }
   .no {
-  	svg {  transform: rotate(180deg); }
+  	svg { transform: rotate(180deg); }
+  	&:hover 
+  	{ svg { stroke:#FFF; color: #FFF } }
   }
 
 	.form-control {
@@ -288,8 +294,6 @@ body {
 		}
 	}
 
-
-
 	.input-group-text {
 		font-size: 1rem;
 	    font-weight: 900;
@@ -303,6 +307,18 @@ body {
 	}
 
 }
+
+.results {
+  .box {
+  	&:hover {
+  		background-color: #FFF !important; color: #000 !important;
+  	}
+
+  	padding: 0 50px;
+
+  }
+}
+
 
 .single_choice {
 

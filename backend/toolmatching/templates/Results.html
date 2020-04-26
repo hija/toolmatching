@@ -34,7 +34,63 @@
     <main role="main" class="inner cover p-5 pt-0">
         <div class="text-left">
             <h1 class="heading pt-3 pb-5">Your top matches:</h1>
-            <div class="container categories">
+            <div class="container results">
+                <div class="row mb-3">
+                    <div class="col-sm">
+                        <div class="box">
+                            <div class="d-flex justify-content-between"> 
+                              <div class="cardnumber">#1</div> 
+                              <div class="getbutton"><button type="button" id="getbutton-first" onclick="" class="btn btn-primary btn-sm">GET TOOL</button></div> 
+                            </div>
+
+                            <div class="detailscard">
+                                <div class="container tooldetailscard"> 
+                                    <div id="tool-logo-first" class="logo-tool"><img class="logo-img" src="{{first_image}}" alt="logo-one"></div>
+                                    <div class="toolname"><div id="tool-name-first" class="tooltext">{{first_name}}</div> <a style="font-size:smaller;" href="https://euvsvirus.org/">Visit website</a></div>
+                                </div>
+                                <div class="border-top my-3"></div>
+                                <div class="container tooldetailscard pricedetails"> 
+                                    <div class="category-text" style="font-size:small">Starting at</div>  
+                                    <div id="price-first" class="category-text" style="font-size:x-large; font-weight: bolder;">5 €</div> 
+                                    <div class="category-text" style="font-size:small">per user per month</div>  
+                                </div>
+
+                                <div class="container tooldetailscard pricedetails" style="padding-top:20px;"> 
+                                    <div id="trial-first" class="category-text" style="font-size:x-large; font-weight: bolder;">1 month</div> 
+                                    <div class="category-text" style="font-size:small">free trial</div>  
+                                </div>
+
+                                <div class="container tooldetailscard pricedetails" style="padding-top:20px;"> 
+                                    <div class="category-text" style="font-size:small">Maximum users</div> 
+                                    <div id="max-users-first" class="category-text" style="font-size:x-large; font-weight: bolder;">500</div>  
+                                </div>
+
+                                <div class="container tooldetailscard" style="padding-top:20px; padding-bottom:20px;"> 
+                                    <div class="logo-tool" style="width:30px; padding-left:10px;"><img class="logo-img" src="{{ url_for('static', filename='images/smartphone.svg') }}" alt="logo-one"></div>
+                                    <div class="toolname"><div id="mobile-app-first" style="font-size:small; margin-left:10px;">Mobile app available</div></div>  
+                                </div>
+
+                                <div style="padding-left:20px;">
+                                    <button type="button" class="btn btn-sm btn-primary btn-lg btn-block" style="padding-left:20px;">More Info</button>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                    <div class="col-sm">
+                        <div class="box">
+                            
+                        </div>
+                    </div>
+                    <div class="col-sm">
+                        <div class="box">
+                            
+                        </div>
+                    </div>
+                </div>
+
+
                 <div class="row mb-3">
                 <div class="col-sm custom-col animated animatedFadeInUp fadeInUp">
                     <div class="card">
