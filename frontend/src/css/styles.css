@@ -7419,6 +7419,12 @@ body {
   color: #000000;
   text-transform: uppercase; }
 
+.single_choice .custom-control-input:checked + .custom-control-label {
+  color: #056CF2 !important; }
+
+.single_choice .custom-control-label::before {
+  border: #000 solid 3px; }
+
 input[type="range"] {
   -webkit-appearance: none;
   -moz-apperance: none;

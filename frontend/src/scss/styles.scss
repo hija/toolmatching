@@ -309,6 +309,11 @@ body {
 		text-transform: uppercase;
 	}
 
+	.custom-control-input:checked + .custom-control-label { color: #056CF2 !important; }
+	.custom-control-label::before {
+		border: #000 solid 3px;
+	}
+
 }
 
 
