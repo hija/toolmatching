@@ -10,6 +10,7 @@ function style() {
     .pipe(sass().on('error',sass.logError))
     //3. where do I save the compiled css file
     .pipe(gulp.dest('src/css'))
+    .pipe(gulp.dest('../backend/toolmatching/static/css'))
     //4. stream change to all browsers
     .pipe(browserSync.stream());
 }
