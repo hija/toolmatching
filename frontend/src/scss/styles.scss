@@ -211,7 +211,7 @@ body {
 }
 
 
-.radio, .checkbox {
+.radio, .checkbox, .inputs {
   width: 100%;
   text-align: left;
   h1 {
@@ -243,6 +243,9 @@ body {
     &:active{
       transform: translateY(10px);
     }
+    &.form-input {
+    	padding: 12px 0 13px 0;
+    }
   }
 
   input[type="radio"], input[type="checkbox"] {
@@ -261,6 +264,36 @@ body {
   .no {
   	svg {  transform: rotate(180deg); }
   }
+
+	.form-control {
+		border: none;
+		font: 20px/24px Rubik; font-weight: 900; letter-spacing: 0.4px; text-transform: uppercase;
+
+		&::placeholder { color: #D9D9D9; }
+		&::placeholder { color: #D9D9D9; }
+		&::placeholder { color: #D9D9D9; }
+
+		&:focus {
+		    background-color: #fff;
+		    border-color: #7ab3fc;
+		    outline: 0;
+		    box-shadow: 0 0 0 0 rgba(5, 108, 242, 0);
+		    border: none !important;
+		}
+	}
+
+	.input-group-text {
+		font-size: 1rem;
+	    font-weight: 900;
+	    line-height: 1.5;
+	    color: #000;
+	    text-align: center;
+	    white-space: nowrap;
+	    background-color: transparent !important;
+	    border: none !important;
+	    border-radius: 0; margin-right: 10px;
+	}
+
 }
 
 
