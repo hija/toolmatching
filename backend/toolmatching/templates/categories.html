@@ -1,0 +1,120 @@
+{% include 'header.html' %}
+
+<body class="text-center questionnaire">
+    
+<div class="cover-container d-flex w-100 h-100 pt-5 mx-auto flex-column">
+  <header class="masthead pl-5 pr-5">
+    <div class="inner">
+
+      <h3 class="masthead-brand"><img id="mainlogo" src="{{ url_for('static', filename='images/logo.png') }}" alt="Logo" width="140"></h3>
+    </div>
+  </header>
+
+  <main role="main" class="inner cover p-5 pt-0">
+    <div class="text-left">
+      <h1 class="heading pt-3 pb-5">I need a tool for:</h1>
+      <div class="container categories">
+        <div class="row mb-3">
+          <div class="col-sm">
+            <a href="#" class="selected" category="task-management">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22.621" height="21" viewBox="0 0 22.621 21"><defs><style>.a,.b{fill:none;stroke-linecap:round;stroke-linejoin:round;stroke-width:3px;}.a{stroke:#056cf2;}.b{stroke:#000;}</style></defs><g transform="translate(1.5 1.5)"><path class="a" d="M9,11l3,3L22,4" transform="translate(-3 -3)"/><path class="b" d="M21,12v7a2,2,0,0,1-2,2H5a2,2,0,0,1-2-2V5A2,2,0,0,1,5,3H16" transform="translate(-3 -3)"/></g></svg> 
+              Task Management
+            </a>
+          </div>
+          <div class="col-sm">
+            <a href="#" category="file-sharing">
+            <svg xmlns="http://www.w3.org/2000/svg" width="19" height="23" viewBox="0 0 19 23"><defs><style>.a,.b{fill:none;stroke-linecap:round;stroke-linejoin:round;stroke-width:3px;}.a{stroke:#056cf2;}.b{stroke:#000;}</style></defs><g transform="translate(1.5 1.5)"><path class="a" d="M13,2V9h7" transform="translate(-4 -2)"/><path class="b" d="M13,2H6A2,2,0,0,0,4,4V20a2,2,0,0,0,2,2H18a2,2,0,0,0,2-2V9Z" transform="translate(-4 -2)"/></g></svg>
+            File Sharing
+          </a>
+          </div>
+          <div class="col-sm">
+            <a href="#" category="communication">
+              <svg xmlns="http://www.w3.org/2000/svg" width="25" height="21.195" viewBox="0 0 25 21.195"><defs><style>.a,.b{fill:none;stroke-linecap:round;stroke-linejoin:round;stroke-width:3px;}.a{stroke:#000;}.b{stroke:#056cf2;}</style></defs><g transform="translate(1.5 1.695)"><path class="a" d="M17,21V19a4,4,0,0,0-4-4H5a4,4,0,0,0-4,4v2" transform="translate(-1 -3)"/><circle class="a" cx="4" cy="4" r="4" transform="translate(4)"/><path class="b" d="M23,21V19a4,4,0,0,0-3-3.87" transform="translate(-1 -3)"/><path class="b" d="M16,3.13a4,4,0,0,1,0,7.75" transform="translate(-1 -3)"/></g></svg>
+            Communication
+          </a>
+          </div>
+          <div class="col-sm">
+            <div>
+            More Coming soon
+          </div>
+          </div>
+        </div>
+        <div class="row mb-3">
+          <div class="col-sm">
+            <div>
+            More Coming soon
+          </div>
+          </div>
+          <div class="col-sm">
+            <div>
+            More Coming soon
+          </div>
+          </div>
+          <div class="col-sm">
+            <div>
+            More Coming soon
+          </div>
+          </div>
+          <div class="col-sm">
+            <div>
+            More Coming soon
+          </div>
+          </div>
+        </div>
+        <div class="row mb-3">
+          <div class="col-sm">
+            <div>
+            More Coming soon
+          </div>
+          </div>
+          <div class="col-sm">
+            <div>
+            More Coming soon
+          </div>
+          </div>
+          <div class="col-sm">
+            <div>
+            More Coming soon
+          </div>
+          </div>
+          <div class="col-sm">
+            <div>
+            More Coming soon
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="text-right">
+      <p class="lead">
+        <form action="questionnaire" id="questionnaire" method="POST">
+        <input type="hidden" name="category">
+          <a href="#" class="btn btn-lg btn-primary">Agree and start*</a>
+        </form>
+      </p>
+      </div>
+  </main>
+
+  <footer class="mastfoot mt-auto">
+    <div class="inner">
+      <p>*Tilde tofu chicharrones seitan. Small batch man braid fixie 8-bit. Occupy fam portland pop-up live-edge ethical. Pinterest butcher echo park neutra beard cred. Twee vape af fashion axe. Blue bottle cold-pressed plaid cliche pinterest.</p>
+    </div>
+  </footer>
+
+</div>
+
+<script>
+  $('a').not('.btn').click(function(){
+    $('a').not(this).removeClass('selected');
+    $(this).addClass("selected");
+  });
+
+  $('.btn').click(function(){
+    const selected = $(".selected").attr('category');
+    $('#questionnaire input[name=category]').val(selected);
+    $('#questionnaire').submit();
+
+  });
+</script>
+
+{% include 'footer.html' %}

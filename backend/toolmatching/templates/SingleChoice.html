@@ -1,0 +1,78 @@
+{% include 'header.html' %}
+
+<body class="text-center questionnaire">
+
+<div class="cover-container d-flex w-100 h-100 pt-5 mx-auto flex-column">
+    <header class="masthead pl-5 pr-5">
+        <div class="inner">
+
+            <h3 class="masthead-brand"><img id="mainlogo" src="{{ url_for('static', filename='images/logo.png') }}" alt="Logo" width="140"></h3>
+            <!-- <nav class="nav nav-masthead justify-content-center">
+              <a class="nav-link active" href="#">Home</a>
+              <a class="nav-link" href="#">Features</a>
+              <a class="nav-link" href="#">Contact</a>
+            </nav>
+          -->
+        </div>
+    </header>
+
+    <main role="main" class="inner cover p-5 pt-0 pb-0">
+        <div class="text-left">
+            <h1 class="heading pt-3 pb-5">{{question|safe}}</h1>
+            <div class="container">
+                <p>Select your answer and click „Continue“.</p>
+                <div class="row mb-3">
+                    {% for choice in choices %}
+                    <div class="col-sm">
+                            <div class="radio">
+                                <label>
+                                    <input type="radio" name="radio" value="{{choice}}"/>
+                                    <div class="box">
+                                        <span>{{choice}}</span>
+                                    </div>
+                                </label>
+                            </div>
+                    </div>
+                    {% endfor %}
+                    <div class="col-sm">
+                    </div>
+                    <div class="col-sm">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="mastfoot mt-auto no_bg">
+        <div class="inner">
+            <div class="nav pl-5 pr-5">
+                <div class="back">
+                    <!--
+                    <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="9.621" height="16.243" viewBox="0 0 9.621 16.243"><defs><style>.a{fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:3px;}</style></defs><g transform="translate(1.5 2.121)"><path class="a" d="M15,18,9,12l6-6" transform="translate(-9 -6)"/></g></svg> Back</a>
+                    -->
+                </div>
+
+                <div class="continue">
+                    <form action="questionnaire" id="questionnaire" method="POST">
+                        <input type="hidden" name="id" value="{{questionid}}">
+                        <input type="hidden" name="response">
+                    </form>
+                    <a>Continue
+                        <svg xmlns="http://www.w3.org/2000/svg" width="9.621" height="16.243" viewBox="0 0 9.621 16.243"><defs><style>.a{fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:3px;}</style></defs><g transform="translate(2.121 2.121)"><path class="a" d="M9,18l6-6L9,6" transform="translate(-9 -6)"/></g></svg></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</div>
+
+<script>
+    $('.continue').click(function(){
+
+        const selected = $(":checked").attr('value');
+        console.log(selected)
+        $('#questionnaire input[name=response]').val(selected);
+        $('#questionnaire').submit();
+
+    });
+</script>
+{% include 'footer.html' %}

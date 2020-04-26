@@ -1,0 +1,17 @@
+{
+"Tools":
+        [
+          {
+            "name": "Google Drive",
+            "icon": "static/icons/google-drive.png"
+          },
+          {
+            "name": "Microsoft Teams",
+            "icon": "static/icons/microsoft-teams.png"
+          },
+          {
+            "name": "Zoho Meeting",
+            "icon": "static/icons/zoho.png"
+          }
+        ]
+}
