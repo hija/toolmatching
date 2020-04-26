@@ -1,3 +1,62 @@
 {
-
+  "Questions":
+  [
+    {
+      "id": "using-suits",
+      "type": "single-choice",
+      "question": "Are you already using <b>one</b> of the following suits?",
+      "choices": ["G Suite", "Office 365", "Zoho"]
+    },
+    {
+      "id": "business-type",
+      "type": "single-choice",
+      "question": "Which type of business will this tool be used for?",
+      "choices": ["Individual", "SME", "Enterprise", "Education"]
+    },
+    {
+      "id": "storage",
+      "type": "single-choice",
+      "question": "How much storage will you need?",
+      "choices": ["1-5 GB", "6-50 GB", "51-100 GB", "101GB-1000 GB", "1TB+"]
+    },
+    {
+      "id": "pay-per-user",
+      "type": "number",
+      "question": "How much are you willing to pay per user per month [€/user/month]?",
+      "min": 0,
+      "max": 20,
+      "default": 5,
+      "better": "lower"
+    }
+  ],
+  "Tools":
+  [
+    {
+      "name": "Google Drive",
+      "using-suits": "G Suite",
+      "business-type": "Enterprise",
+      "pay-per-user": 4.68,
+      "storage": ["1-5 GB", "6-50 GB", "51-100 GB", "101GB-1000 GB", "1TB+"]
+    },
+    {
+      "name": "Microsoft OneDrive",
+      "using-suits": "Office 365",
+      "business-type": "Enterprise",
+      "pay-per-user": 4.2,
+      "storage": ["1-5 GB", "6-50 GB", "51-100 GB", "101GB-1000 GB", "1TB+"]
+    },
+    {
+      "name": "WeTransfer",
+      "using-suits": "",
+      "business-type": "SME",
+      "pay-per-user": 12,
+      "storage": ["1-5 GB", "6-50 GB", "51-100 GB", "101GB-1000 GB"]
+    },
+    {
+      "name": "Box",
+      "business-type": "SME",
+      "pay-per-user": 4.5,
+      "storage": ["1-5 GB", "6-50 GB", "51-100 GB", "101GB-1000 GB", "1TB+"]
+    }
+  ]
 }
