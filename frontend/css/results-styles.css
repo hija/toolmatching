@@ -1,0 +1,112 @@
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 100%;
+    border-radius: 5px;
+    padding: 10px !important;
+  }
+
+  .detailscard {
+    padding-left: 0 !important;
+    margin-top: 5px;
+  }
+
+.custom-col {
+    padding-inline: 10px;
+}
+
+.cardnumber {
+    font-weight: bold;
+    text-align: left;
+    position: absolute;
+    width: 40%;
+}
+
+.tooldetailscard {
+    text-align: left !important;
+}
+
+.getbutton {
+    text-align: right;
+    position: relative;
+}
+
+.logo-tool {
+    width: 20%;
+    padding-left: 0;
+    display: inline-block;
+}
+
+.logo-img {
+    width: 100%;
+}
+
+.toolname {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.tooltext {
+    display: block;
+    font-weight: bold;
+}
+
+.pricedetails {
+    padding-left: 20px;
+}
+
+@keyframes fadeInUp {
+    from {
+        transform: translate3d(0,40px,0)
+    }
+  
+    to {
+        transform: translate3d(0,0,0);
+        opacity: 1
+    }
+  }
+  
+  @-webkit-keyframes fadeInUp {
+    from {
+        transform: translate3d(0,40px,0)
+    }
+  
+    to {
+        transform: translate3d(0,0,0);
+        opacity: 1
+    }
+  }
+  
+  .animated {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-fill-mode: both
+  }
+
+  .animated-second {
+    animation-delay: 0.5s;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-fill-mode: both
+  }
+
+  .animated-third {
+    animation-delay: 1s;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-fill-mode: both
+  }
+  
+  .animatedFadeInUp {
+    opacity: 0
+  }
+  
+  .fadeInUp {
+    opacity: 0;
+    animation-name: fadeInUp;
+    -webkit-animation-name: fadeInUp;
+    visibility: visible !important; 
+  }
