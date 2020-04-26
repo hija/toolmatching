@@ -7303,10 +7303,12 @@ body {
 
 /* Questionnaire */
 .heading {
-  font: 60px/95px Rubik !important;
+  font: 60px/75px Rubik !important;
   letter-spacing: 0px;
   color: #000000;
   font-weight: 400; }
+  .heading.small {
+    font: 60px/75px Rubik !important; }
 
 .questionnaire .categories .col-sm > div, .questionnaire .categories .col-sm > a {
   display: block;
@@ -7334,13 +7336,17 @@ body {
     padding-left: 50px;
     padding-right: 50px; }
 
-.radio {
+.radio, .checkbox {
   width: 100%;
   text-align: left; }
-  .radio h1 {
+  .radio h1, .checkbox h1 {
     color: #FFF; }
-  .radio .box {
-    width: 415px;
+  .radio label, .checkbox label {
+    width: 100%; }
+  .radio.w_415px .box, .checkbox.w_415px .box {
+    width: 415px; }
+  .radio .box, .checkbox .box {
+    width: 100%;
     background-color: #FFF;
     transition: all 250ms ease;
     will-change: transition;
@@ -7357,20 +7363,20 @@ body {
     font-weight: 900;
     letter-spacing: 0.4px;
     text-transform: uppercase; }
-    .radio .box svg {
+    .radio .box svg, .checkbox .box svg {
       stroke: #000;
       color: #000; }
-    .radio .box:active {
+    .radio .box:active, .checkbox .box:active {
       transform: translateY(10px); }
-  .radio input[type="radio"] {
+  .radio input[type="radio"], .radio input[type="checkbox"], .checkbox input[type="radio"], .checkbox input[type="checkbox"] {
     display: none; }
-    .radio input[type="radio"]:checked + .box {
+    .radio input[type="radio"]:checked + .box, .radio input[type="checkbox"]:checked + .box, .checkbox input[type="radio"]:checked + .box, .checkbox input[type="checkbox"]:checked + .box {
       background-color: #056CF2;
       color: #FFF; }
-      .radio input[type="radio"]:checked + .box svg {
+      .radio input[type="radio"]:checked + .box svg, .radio input[type="checkbox"]:checked + .box svg, .checkbox input[type="radio"]:checked + .box svg, .checkbox input[type="checkbox"]:checked + .box svg {
         stroke: #FFF;
         color: #FFF; }
-  .radio .no svg {
+  .radio .no svg, .checkbox .no svg {
     transform: rotate(180deg); }
 
 input[type="range"] {
@@ -7535,3 +7541,7 @@ input[type='range']::-webkit-slider-thumb {
         border-left-color: transparent;
         border-right-color: transparent;
         transform: translateX(-50%); }
+  .range .range_values {
+    letter-spacing: 0.4px;
+    color: #D9D9D9;
+    text-transform: uppercase; }

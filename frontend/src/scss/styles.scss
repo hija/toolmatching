@@ -181,7 +181,9 @@ body {
 
 /* Questionnaire */
 
-.heading { font: 60px/95px Rubik !important; letter-spacing: 0px; color: #000000; font-weight: 400; }
+.heading { font: 60px/75px Rubik !important; letter-spacing: 0px; color: #000000; font-weight: 400; 
+	&.small { font: 60px/75px Rubik !important; }
+}
 
 .questionnaire {
 	.categories {
@@ -209,16 +211,19 @@ body {
 }
 
 
-.radio {
+.radio, .checkbox {
   width: 100%;
   text-align: left;
   h1 {
     color: #FFF;
   }
+  label { width: 100%; }
 
+	&.w_415px .box { width: 415px; }
+    
   .box {
-    width: 415px;
-    background-color: #FFF;
+  	width: 100%;
+ 	background-color: #FFF;
     transition: all 250ms ease;
     will-change: transition;
     display: inline-block;
@@ -230,9 +235,9 @@ body {
 	box-shadow: 0px 5px 20px #0000000D;
 	border-radius: 20px;
 	text-align: center;
-font: 20px/24px Rubik; font-weight: 900;
-letter-spacing: 0.4px;
-text-transform: uppercase;
+	font: 20px/24px Rubik; font-weight: 900;
+	letter-spacing: 0.4px;
+	text-transform: uppercase;
 	svg { stroke:#000; color: #000; }
 
     &:active{
@@ -240,7 +245,7 @@ text-transform: uppercase;
     }
   }
 
-  input[type="radio"] {
+  input[type="radio"], input[type="checkbox"] {
     display: none;
     &:checked {
       + .box {
@@ -459,5 +464,9 @@ $offset-y-range-output: 4px;
 				transform: translateX(-50%);
 			}
 		}
+	}
+
+	.range_values {
+		letter-spacing: 0.4px; color: #D9D9D9; text-transform: uppercase;
 	}
 }
