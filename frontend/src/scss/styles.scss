@@ -217,7 +217,7 @@ body {
 }
 
 
-.radio, .checkbox, .inputs, .scale {
+.radio, .checkbox, .inputs, .scale, .results {
   width: 100%;
   text-align: left;
   h1 {
@@ -252,7 +252,10 @@ body {
     &.form-input {
     	padding: 12px 0 13px 0;
     }
+  	&:hover { background-color: #056CF2; color: #FFF; }
   }
+
+
 
   input[type="radio"], input[type="checkbox"] {
     display: none;
@@ -266,9 +269,12 @@ body {
   }
 
   .yes {
+  	&:hover { svg { stroke:#FFF; color: #FFF } }
   }
   .no {
-  	svg {  transform: rotate(180deg); }
+  	svg { transform: rotate(180deg); }
+  	&:hover 
+  	{ svg { stroke:#FFF; color: #FFF } }
   }
 
 	.form-control {
@@ -288,8 +294,6 @@ body {
 		}
 	}
 
-
-
 	.input-group-text {
 		font-size: 1rem;
 	    font-weight: 900;
@@ -303,6 +307,127 @@ body {
 	}
 
 }
+
+.results {
+  .box { padding: 0 40px; text-align: left; text-transform: initial;
+  	&:hover {
+  		background-color: #FFF !important; color: #000 !important;
+  	}
+
+  	.get_tool {
+  		padding: 20px 0; border-bottom: 3px solid #F2F2F2;
+	  	.btn { 
+	  		background: #056CF2 0% 0% no-repeat padding-box;
+			box-shadow: 0px 5px 20px #0000000D;
+			border-radius: 15px; 
+			text-align: center;
+			font: 20px/26px Rubik; font-weight: 900;
+			letter-spacing: 0.4px;
+			color: #FFFFFF;
+			text-transform: uppercase;
+		}
+	}
+
+	.tooldetailscard { padding: 40px 0; }
+
+	.logo-tool { padding: 15px; background: #FFFFFF 0% 0% no-repeat padding-box; box-shadow: 0px 5px 10px #0000001A; border-radius: 15px;
+	  	.logo-img { width: 55px; height: 55px; }
+	}
+	.toolname {
+		text-align: left; padding-left: 20px;
+		.tooltext { text-align: left; text-transform: initial; margin-bottom: 5px;
+			font: 30px/26px Rubik; font-weight: 900;
+			letter-spacing: 0.6px;
+			color: #000000; 
+		}
+
+		a {
+				text-align: left; text-transform: initial;
+			font: 20px/26px Rubik; font-weight: 400;
+			letter-spacing: 0.4px;
+			color: #056CF2; }
+	}
+
+	.details {
+		border-top: 3px solid #F2F2F2; padding-top: 40px;
+
+		.starting {
+			font: 20px/26px Rubik;
+			letter-spacing: 0.4px;
+			color: #000000;
+		}
+
+		.at {
+			text-align: left;
+			font: 50px/26px Rubik;
+			letter-spacing: 1px; line-height: 1.2;
+			color: #000000;
+		}
+		.per {
+			text-align: left;
+			font: 20px/26px Rubik;
+			letter-spacing: 0.4px;
+			color: #000000;
+		}
+	}
+
+	.compliant { margin-top: 80px; 
+		svg { margin-right: 20px; }
+			text-align: left;
+			font: 20px/26px Rubik; font-weight: 900;
+			letter-spacing: 0.4px;
+			color: #000000;
+			}
+
+	.trial {
+		margin-top: 80px;
+		.time { 
+			text-align: left;
+			font: 50px/26px Rubik; font-weight: 900;
+			letter-spacing: 1px;
+			color: #000000; line-height: 1.2;
+		}
+		.plan {
+			text-align: left;
+			font: 20px/26px Rubik;
+			letter-spacing: 0.4px;
+			color: #000000;
+		}
+	}
+
+	.info { margin-top: 80px;
+		.text {
+			text-align: left;
+			font: 20px/26px Rubik;
+			letter-spacing: 0.4px;
+			color: #000000;
+		}
+		.value {
+			text-align: left;
+			font: 50px/26px Rubik;  font-weight: 900;
+			letter-spacing: 1px;
+			color: #000000; line-height: 1.2;
+		}
+
+	}
+
+	.more {
+		margin: 80px 0 40px 0;
+		svg { margin-left: 10px; position: relative; top: -2px; }
+		button { text-align: center;
+			font: 20px/26px Rubik; font-weight: 900;
+			letter-spacing: 0.4px;
+			color: #FFFFFF;
+			text-transform: uppercase; 
+		}
+	}
+
+
+
+
+  }
+}
+
 
 .single_choice {
 

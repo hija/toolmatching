@@ -34,138 +34,223 @@
     <main role="main" class="inner cover p-5 pt-0">
         <div class="text-left">
             <h1 class="heading pt-3 pb-5">Your top matches:</h1>
-            <div class="container categories">
+            <div class="container results">
                 <div class="row mb-3">
-                <div class="col-sm custom-col animated animatedFadeInUp fadeInUp">
-                    <div class="card">
-                        <div class="container"> 
-                          <div class="cardnumber">#1</div> 
-                          <div class="getbutton"><button type="button" id="getbutton-first" onclick="" class="btn btn-primary btn-sm">GET TOOL</button></div> 
+
+                    <div class="col-sm">
+
+                        <div class="box">
+                            <div class="d-flex justify-content-between align-items-center get_tool"> 
+                              <div class="cardnumber">#1</div> 
+                              <div class="getbutton"><button type="button" id="getbutton-first" onclick="" class="btn btn-primary btn-lg">GET TOOL</button></div> 
+                            </div>
+
+                            <div class="detailscard">
+                                <div class="d-flex align-items-center tooldetailscard"> 
+                                    <div class="logo-tool"><img class="logo-img" src="{{first_image}}" alt="logo-one"></div>
+                                    <div class="toolname">
+                                        <div class="tooltext">{{first_name}}</div>
+                                        <a style="font-size:smaller;" href="https://gsuite.google.com/">Visit website</a>
+                                    </div>
+                                </div>
+
+                                <div class="details"> 
+                                    <div class="starting">Starting at</div>  
+                                    <div class="at">12 €</div>
+                                    <div class="per">per user per month</div>  
+                                </div>
+
+                                <div class="compliant">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="19" height="23" viewBox="0 0 19 23"><defs><style>.a{fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:3px;}</style></defs><g transform="translate(1.5 1.5)"><path class="a" d="M12,22s8-4,8-10V5L12,2,4,5v7C4,18,12,22,12,22Z" transform="translate(-4 -2)"/></g></svg>GDPR compliant
+                                </div>
+
+                                <div class="trial"> 
+                                    <div class="time">No</div> 
+                                    <div class="plan">free trial</div>  
+                                </div>
+
+                                <div class="info integrations"> 
+                                    <div class="text">Number of integrations</div> 
+                                    <div class="value">10+</div>  
+                                </div>
+
+                                <div class="info"> 
+                                    <div class="text">Maximum users</div> 
+                                    <div class="value">100</div>  
+                                </div>
+
+                                <div class="d-flex info">
+                                    <div class="mr-3">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="17" height="23" viewBox="0 0 17 23"><defs><style>.mobile_a{fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:3px;}</style></defs><g transform="translate(1.5 1.5)"><rect class="mobile_a" width="14" height="20" rx="2"/><line class="a" x2="0.01" transform="translate(7 16)"/></g></svg>
+                                    </div>
+                                    <div>
+                                        <div class="text">Mobile app available for <br /><strong>iOS & Android</strong></div>
+                                    </div>
+                                </div>
+
+                                <div class="more">
+                                    <button type="button" class="btn btn-sm btn-primary btn-lg btn-block">More Info <svg xmlns="http://www.w3.org/2000/svg" width="9.621" height="16.243" viewBox="0 0 9.621 16.243"><defs><style>.more_a{fill:none;stroke:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:3px;}</style></defs><path class="more_a" d="M9,18l6-6L9,6" transform="translate(-6.879 -3.879)"/></svg></button>
+                                </div>
+                            </div>
                         </div>
+
                     </div>
-                    <div class="card detailscard">
-                        <div class="container tooldetailscard"> 
-                            <div id="tool-logo-first" class="logo-tool"><img class="logo-img" src="{{first_image}}" alt="logo-one"></div>
-                            <div class="toolname"><div id="tool-name-first" class="tooltext">{{first_name}}</div> <a style="font-size:smaller;" href="https://euvsvirus.org/">Visit website</a></div>
-                        </div>
-                        <div class="border-top my-3"></div>
-                        <div class="container tooldetailscard pricedetails"> 
-                            <div class="category-text" style="font-size:small">Starting at</div>  
-                            <div id="price-first" class="category-text" style="font-size:x-large; font-weight: bolder;">5 €</div> 
-                            <div class="category-text" style="font-size:small">per user per month</div>  
+                    <div class="col-sm">
+
+
+                        <div class="box">
+                            <div class="d-flex justify-content-between align-items-center get_tool"> 
+                              <div class="cardnumber">#2</div> 
+                              <div class="getbutton"><button type="button" id="getbutton-first" onclick="" class="btn btn-primary btn-lg">GET TOOL</button></div> 
+                            </div>
+
+                            <div class="detailscard">
+                                <div class="d-flex align-items-center tooldetailscard"> 
+                                    <div class="logo-tool"><img class="logo-img" src="{{second_image}}" alt="logo-one"></div>
+                                    <div class="toolname">
+                                        <div class="tooltext">{{second_name}}</div>
+                                        <a style="font-size:smaller;" href="https://www.zoho.com/meeting/">Visit website</a>
+                                    </div>
+                                </div>
+
+                                <div class="details"> 
+                                    <div class="starting">Starting at</div>  
+                                    <div class="at">15 €</div>
+                                    <div class="per">per user per month</div>  
+                                </div>
+
+                                <div class="compliant">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="26.243" height="26.243" viewBox="0 0 26.243 26.243"><defs><style>.a{fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:3px;}</style></defs><g transform="translate(2.121 2.121)"><path class="a" d="M19.69,14A6.9,6.9,0,0,0,20,12V5L12,2,8.84,3.18" transform="translate(-1 -1)"/><path class="a" d="M4.73,4.73,4,5v7c0,6,8,10,8,10a20.29,20.29,0,0,0,5.62-4.38" transform="translate(-1 -1)"/><line class="a" x2="22" y2="22"/></g></svg>Not GDPR compliant
+                                </div>
+
+                                <div class="trial"> 
+                                    <div class="time">1 Month</div> 
+                                    <div class="plan">free trial</div>  
+                                </div>
+
+                                <div class="info integrations"> 
+                                    <div class="text">Number of integrations</div> 
+                                    <div class="value">30+</div>  
+                                </div>
+
+                                <div class="info"> 
+                                    <div class="text">Maximum users</div> 
+                                    <div class="value">20</div>  
+                                </div>
+
+                                <div class="d-flex info">
+                                    <div class="mr-3">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="17" height="23" viewBox="0 0 17 23"><defs><style>.mobile_a{fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:3px;}</style></defs><g transform="translate(1.5 1.5)"><rect class="mobile_a" width="14" height="20" rx="2"/><line class="a" x2="0.01" transform="translate(7 16)"/></g></svg>
+                                    </div>
+                                    <div>
+                                        <div class="text">Mobile app available for <br /><strong>iOS & Android</strong></div>
+                                    </div>
+                                </div>
+
+                                <div class="more">
+                                    <button type="button" class="btn btn-sm btn-primary btn-lg btn-block">More Info <svg xmlns="http://www.w3.org/2000/svg" width="9.621" height="16.243" viewBox="0 0 9.621 16.243"><defs><style>.more_a{fill:none;stroke:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:3px;}</style></defs><path class="more_a" d="M9,18l6-6L9,6" transform="translate(-6.879 -3.879)"/></svg></button>
+                                </div>
+                            </div>
                         </div>
 
-                        <div class="container tooldetailscard pricedetails" style="padding-top:20px;"> 
-                            <div id="trial-first" class="category-text" style="font-size:x-large; font-weight: bolder;">1 month</div> 
-                            <div class="category-text" style="font-size:small">free trial</div>  
-                        </div>
-
-                        <div class="container tooldetailscard pricedetails" style="padding-top:20px;"> 
-                            <div class="category-text" style="font-size:small">Maximum users</div> 
-                            <div id="max-users-first" class="category-text" style="font-size:x-large; font-weight: bolder;">500</div>  
-                        </div>
-
-                        <div class="container tooldetailscard" style="padding-top:20px; padding-bottom:20px;"> 
-                            <div class="logo-tool" style="width:30px; padding-left:10px;"><img class="logo-img" src="{{ url_for('static', filename='images/smartphone.svg') }}" alt="logo-one"></div>
-                            <div class="toolname"><div id="mobile-app-first" style="font-size:small; margin-left:10px;">Mobile app available</div></div>  
-                        </div>
-
-                        <div style="padding-left:20px;">
-                            <button type="button" class="btn btn-sm btn-primary btn-lg btn-block" style="padding-left:20px;">More Info</button>
-                        </div>
                     </div>
+                    <div class="col-sm">
+
+                        <div class="box">
+                            <div class="d-flex justify-content-between align-items-center get_tool"> 
+                              <div class="cardnumber">#3</div> 
+                              <div class="getbutton"><button type="button" id="getbutton-first" onclick="" class="btn btn-primary btn-lg">GET TOOL</button></div> 
+                            </div>
+
+                            <div class="detailscard">
+                                <div class="d-flex align-items-center tooldetailscard"> 
+                                    <div class="logo-tool"><img class="logo-img" src="{{third_image}}" alt="logo-one"></div>
+                                    <div class="toolname">
+                                        <div class="tooltext">{{third_name}}</div>
+                                        <a src="" style="font-size:smaller;" href="https://www.microsoft.com/en/microsoft-365/microsoft-teams/group-chat-software">Visit website</a>
+                                    </div>
+                                </div>
+
+                                <div class="details"> 
+                                    <div class="starting">Starting at</div>  
+                                    <div class="at">99 €</div>
+                                    <div class="per">per user per month</div>  
+                                </div>
+
+                                <div class="compliant">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="19" height="23" viewBox="0 0 19 23"><defs><style>.a{fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:3px;}</style></defs><g transform="translate(1.5 1.5)"><path class="a" d="M12,22s8-4,8-10V5L12,2,4,5v7C4,18,12,22,12,22Z" transform="translate(-4 -2)"/></g></svg>GDPR compliant
+                                </div>
+
+                                <div class="trial"> 
+                                    <div class="time">3 month</div> 
+                                    <div class="plan">free trial</div>  
+                                </div>
+
+                                <div class="info integrations"> 
+                                    <div class="text">Number of integrations</div> 
+                                    <div class="value">50+</div>  
+                                </div>
+
+                                <div class="info"> 
+                                    <div class="text">Maximum users</div> 
+                                    <div class="value">500</div>  
+                                </div>
+
+                                <div class="d-flex info">
+                                    <div class="mr-3">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="17" height="23" viewBox="0 0 17 23"><defs><style>.mobile_a{fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:3px;}</style></defs><g transform="translate(1.5 1.5)"><rect class="mobile_a" width="14" height="20" rx="2"/><line class="a" x2="0.01" transform="translate(7 16)"/></g></svg>
+                                    </div>
+                                    <div>
+                                        <div class="text">Mobile app available for <br /><strong>iOS & Android</strong></div>
+                                    </div>
+                                </div>
+
+                                <div class="more">
+                                    <button type="button" class="btn btn-sm btn-primary btn-lg btn-block">More Info <svg xmlns="http://www.w3.org/2000/svg" width="9.621" height="16.243" viewBox="0 0 9.621 16.243"><defs><style>.more_a{fill:none;stroke:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:3px;}</style></defs><path class="more_a" d="M9,18l6-6L9,6" transform="translate(-6.879 -3.879)"/></svg></button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
                 </div>
-                <div class="col-sm animated-second animatedFadeInUp fadeInUp">
-                    <div class="card">
-                        <div class="container"> 
-                            <div class="cardnumber">#2</div> 
-                            <div class="getbutton"><button type="button" id="getbutton-second" onclick="" class="btn btn-primary btn-sm">GET TOOL</button></div> 
-                        </div>
-                    </div>
-                    <div class="card detailscard">
-                        <div class="container tooldetailscard"> 
-                            <div id="tool-logo-second" class="logo-tool"><img class="logo-img" src="{{second_image}}" alt="logo-one"></div>
-                            <div class="toolname"><div id="tool-name-first" class="tooltext">{{second_name}}</div> <a style="font-size:smaller;" href="https://euvsvirus.org/">Visit website</a></div>
-                        </div>
-                        <div class="border-top my-3"></div>
-                        <div class="container tooldetailscard pricedetails"> 
-                            <div class="category-text" style="font-size:small">Starting at</div>  
-                            <div id="price-second" class="category-text" style="font-size:x-large; font-weight: bolder;">5 €</div> 
-                            <div class="category-text" style="font-size:small">per user per month</div>  
-                        </div>
 
-                        <div class="container tooldetailscard pricedetails" style="padding-top:20px;"> 
-                            <div id="trial-second" class="category-text" style="font-size:x-large; font-weight: bolder;">1 month</div> 
-                            <div class="category-text" style="font-size:small">free trial</div>  
-                        </div>
-
-                        <div class="container tooldetailscard pricedetails" style="padding-top:20px;"> 
-                            <div class="category-text" style="font-size:small">Maximum users</div> 
-                            <div id="max-users-second" class="category-text" style="font-size:x-large; font-weight: bolder;">500</div>  
-                        </div>
-
-                        <div class="container tooldetailscard" style="padding-top:20px; padding-bottom:20px;"> 
-                            <div class="logo-tool" style="width:30px; padding-left:10px;"><img class="logo-img" src="{{ url_for('static', filename='images/smartphone.svg') }}" alt="logo-one"></div>
-                            <div class="toolname"><div id="mobile-app-second" style="font-size:small; margin-left:10px;">Mobile app available</div></div>  
-                        </div>
-
-                        <div style="padding-left:20px;">
-                            <button type="button" class="btn btn-sm btn-primary btn-lg btn-block" style="padding-left:20px;">More Info</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm animated-third animatedFadeInUp fadeInUp">
-                    <div class="card">
-                        <div class="container"> 
-                            <div class="cardnumber">#3</div> 
-                            <div class="getbutton"><button type="button" id="getbutton-third" onclick="" class="btn btn-primary btn-sm">GET TOOL</button></div> 
-                        </div>
-                    </div>
-                    <div class="card detailscard">
-                        <div class="container tooldetailscard"> 
-                            <div id="tool-logo-third" class="logo-tool"><img class="logo-img" src="{{third_image}}" alt="logo-one"></div>
-                            <div class="toolname"><div id="tool-name-first" class="tooltext">{{third_name}}</div> <a style="font-size:smaller;" href="https://euvsvirus.org/">Visit website</a></div>
-                        </div>
-                        <div class="border-top my-3"></div>
-                        <div class="container tooldetailscard pricedetails"> 
-                            <div class="category-text" style="font-size:small">Starting at</div>  
-                            <div id="price-third" class="category-text" style="font-size:x-large; font-weight: bolder;">5 €</div> 
-                            <div class="category-text" style="font-size:small">per user per month</div>  
-                        </div>
-
-                        <div class="container tooldetailscard pricedetails" style="padding-top:20px;"> 
-                            <div id="trial-third" class="category-text" style="font-size:x-large; font-weight: bolder;">1 month</div> 
-                            <div class="category-text" style="font-size:small">free trial</div>  
-                        </div>
-
-                        <div class="container tooldetailscard pricedetails" style="padding-top:20px;"> 
-                            <div class="category-text" style="font-size:small">Maximum users</div> 
-                            <div id="max-users-third" class="category-text" style="font-size:x-large; font-weight: bolder;">500</div>  
-                        </div>
-
-                        <div class="container tooldetailscard" style="padding-top:20px; padding-bottom:20px;"> 
-                            <div class="logo-tool" style="width:30px; padding-left:10px;"><img class="logo-img" src="{{ url_for('static', filename='images/smartphone.svg') }}" alt="logo-one"></div>
-                            <div class="toolname"><div id="mobile-app-third" style="font-size:small; margin-left:10px;">Mobile app available</div></div>  
-                        </div>
-
-                        <div style="padding-left:20px;">
-                            <button type="button" class="btn btn-sm btn-primary btn-lg btn-block" style="padding-left:20px;">More Info</button>
-                        </div>
-                    </div>
-                </div>
-                </div>
             </div>
         </div>
     </main>
 
-        
+<footer class="custom-footer">
+            <div class="footer-container d-flex justify-content-between">
 
+              <div class="d-flex justify-content-between">
+                <div class="footer-content">
+                    <a id="home-link-footer" href="https://toolmatching.com">Home</a>
+                </div>
+                <div class="footer-content">
+                    <a id="legal-link-footer" href="https://toolmatching.com/legal">Legal Notice</a>
+                </div>
+              </div>
 
-  <footer class="mastfoot mt-auto">
-    <div class="inner text-center">
-        <a href="https://euvsvirus.org/">#EUvsVirus</a>
-    </div>
-  </footer>
+              <div>
+                <div class="footer-content-icon" style="float:right; padding-right:40px;">
+                    <a href="#"><img src="{{ url_for('static', filename='images/twitter.svg') }}" alt="twitter" hieight="17"></a>
+                </div>
+                <div class="footer-content-icon" style="float:right; padding-right:25px;">
+                    <a href="#"><img src="{{ url_for('static', filename='images/facebook.svg') }}" alt="facebook" height="17"></a>
+                </div>
+                <div class="footer-content-icon" style="float:right; padding-right:25px;">
+                    <a href="#"><img src="{{ url_for('static', filename='images/instagram.svg') }}" alt="instagram" height="17"></a>
+                </div>
+                <div class="footer-content-icon" style="float:right; padding-right:25px;">
+                    <a href="#"><img src="{{ url_for('static', filename='images/linkedin.svg') }}" alt="linkedin" height="17"></a>
+                </div>
+                <div class="footer-content-icon" style="float:right; padding-right:25px;">
+                    <a href="#"><img src="{{ url_for('static', filename='images/mail.svg') }}" alt="mail" height="17"></a>
+                </div>
+              </div>
+            </div>
+</footer>        
+
 
 </div>
 
