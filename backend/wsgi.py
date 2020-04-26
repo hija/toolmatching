@@ -1,4 +1,4 @@
 from toolmatching import create_app
+from waitress import serve
 
-if __name__ == "__main__":
-    create_app().run()
+serve(create_app(), listen='0.0.0.0:8080', url_prefix='/app')
