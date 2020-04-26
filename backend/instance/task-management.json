@@ -23,7 +23,7 @@
     },
     {
       "id": "features",
-      "type": "many-choice",
+      "type": "multiple-choice",
       "question": "Which of the following features do you need?",
       "choices": ["Gantt", "Kanban", "Time Tracking", "Timeline", "Calendar"]
     }
