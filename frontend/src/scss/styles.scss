@@ -78,6 +78,7 @@ body {
   	text-transform: uppercase; font-size: 1rem; font-weight: 400;
   	strong { font-weight: 900; }
   }
+  #mainlogo { width: 242px !important; }
 }
 
 .masthead-brand {
@@ -158,7 +159,7 @@ body {
 				svg { position: relative; top: -2px; margin-right: 10px; display: inline-block; } 
 			}
 		}
-		.continue { a { padding: 20px 0 0 20px;
+		.continue { a { padding: 20px 0 0 20px; cursor: pointer; color: #056CF2 !important;
 				svg {position: relative; top: -2px; margin-left: 10px; display: inline-block; } 
 			}
 		}
@@ -181,7 +182,9 @@ body {
 
 /* Questionnaire */
 
-.heading { font: 60px/95px Rubik !important; letter-spacing: 0px; color: #000000; font-weight: 400; }
+.heading { font: 80px/95px Rubik !important; letter-spacing: 0px; color: #000000; font-weight: 400; 
+	&.small { font: 60px/75px Rubik !important; }
+}
 
 .questionnaire {
 	.categories {
@@ -191,15 +194,16 @@ body {
 			border-radius: 20px;
 			opacity: 1; text-align: center; padding: 20px;
 		}
+		.soon { color: #D9D9D9; } 
 		.col-sm > a:hover, .col-sm > a.selected {
 			background-color: #EFF6FE; text-decoration: none;
 		}
 	}
 
 	.lead {
-		margin-top: 100px; text-align: right; 
+		margin-top: 80px; text-align: right; 
 		a {
-			font: 20px/26px Rubik; font-weight: 900; text-align: center;
+			font: 20px/26px Rubik; font-weight: 900; text-align: center; border-radius: 20px;
 			letter-spacing: 0.4px;
 			color: #FFFFFF;
 			text-transform: uppercase; padding-left: 50px; padding-right: 50px; 
@@ -209,16 +213,19 @@ body {
 }
 
 
-.radio {
+.radio, .checkbox, .inputs, .scale {
   width: 100%;
   text-align: left;
   h1 {
     color: #FFF;
   }
+  label { width: 100%; }
 
+	&.w_415px .box { width: 415px; }
+    
   .box {
-    width: 415px;
-    background-color: #FFF;
+  	width: 100%;
+ 	background-color: #FFF;
     transition: all 250ms ease;
     will-change: transition;
     display: inline-block;
@@ -230,17 +237,20 @@ body {
 	box-shadow: 0px 5px 20px #0000000D;
 	border-radius: 20px;
 	text-align: center;
-font: 20px/24px Rubik; font-weight: 900;
-letter-spacing: 0.4px;
-text-transform: uppercase;
+	font: 20px/24px Rubik; font-weight: 900;
+	letter-spacing: 0.4px;
+	text-transform: uppercase;
 	svg { stroke:#000; color: #000; }
 
     &:active{
       transform: translateY(10px);
     }
+    &.form-input {
+    	padding: 12px 0 13px 0;
+    }
   }
 
-  input[type="radio"] {
+  input[type="radio"], input[type="checkbox"] {
     display: none;
     &:checked {
       + .box {
@@ -256,6 +266,72 @@ text-transform: uppercase;
   .no {
   	svg {  transform: rotate(180deg); }
   }
+
+	.form-control {
+		border: none;
+		font: 20px/24px Rubik; font-weight: 900; letter-spacing: 0.4px; text-transform: uppercase;
+
+		&::placeholder { color: #D9D9D9; }
+		&::placeholder { color: #D9D9D9; }
+		&::placeholder { color: #D9D9D9; }
+
+		&:focus {
+		    background-color: #fff;
+		    border-color: #7ab3fc;
+		    outline: 0;
+		    box-shadow: 0 0 0 0 rgba(5, 108, 242, 0);
+		    border: none !important;
+		}
+	}
+
+
+
+	.input-group-text {
+		font-size: 1rem;
+	    font-weight: 900;
+	    line-height: 1.5;
+	    color: #000;
+	    text-align: center;
+	    white-space: nowrap;
+	    background-color: transparent !important;
+	    border: none !important;
+	    border-radius: 0; margin-right: 10px;
+	}
+
+}
+
+.single_choice {
+
+	.custom-control-label {
+		font: 20px/30px Rubik;
+		font-weight: 900;
+		letter-spacing: 0.4px;
+		color: #000000;
+		margin-left: 10px;
+
+		text-transform: uppercase;
+		&::before, &::after {
+			left: -2rem;
+		}
+	}
+
+	.custom-control-input { margin-right: 20px; }
+	.custom-control-input:checked + .custom-control-label { color: #056CF2 !important; }
+	.custom-control-label::before {
+		border: #000 solid 3px;
+	}
+
+}
+
+.scale {
+	label { width: 80px; height: 80px; margin-right: 10px; }
+	.box { line-height: 32px; border-radius: 20px;
+		&:hover, &.selected { background-color: #056CF2; 
+			color: #FFF;
+		}
+	}
+	input::checked + .box { background-color: #056CF2; 
+			color: #FFF; }
 }
 
 
@@ -461,3 +537,7 @@ $offset-y-range-output: 4px;
 		}
 	}
 }
+
+	.range_values {
+		letter-spacing: 0.4px; color: #D9D9D9; text-transform: uppercase;
+	}
