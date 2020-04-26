@@ -7188,6 +7188,8 @@ body {
     font-weight: 400; }
     .masthead .masthead-brand strong {
       font-weight: 900; }
+  .masthead .mainlogo {
+    width: 242px !important; }
 
 .masthead-brand {
   margin-bottom: 0; }
@@ -7329,12 +7331,13 @@ body {
   text-decoration: none; }
 
 .questionnaire .lead {
-  margin-top: 100px;
+  margin-top: 80px;
   text-align: right; }
   .questionnaire .lead a {
     font: 20px/26px Rubik;
     font-weight: 900;
     text-align: center;
+    border-radius: 20px;
     letter-spacing: 0.4px;
     color: #FFFFFF;
     text-transform: uppercase;
