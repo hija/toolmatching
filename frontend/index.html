@@ -12,7 +12,9 @@
 <script language="javascript" type="text/javascript" src="js/fadein.js"></script>
  
 </head>
-    <body> 
+    <body>
+        <div id="container-whole">
+        <div id="main">
         <header>
             <nav class="navbar navbar-expand-lg navbar-light navbar-custom" id="navbar-round">               
                 <a class="navbar-brand mr-auto" id="navbar-round"  href="#"> <img id="mainlogo" src="img/logo.png" alt="Logo" vspace="20"></a>
@@ -26,7 +28,7 @@
                 <div class="container">
                     <h1 class="display-4 animated animatedFadeInUp fadeInUp" id ="headline">Find out which tool perfectly fits your team's needs</h1>
                     <!--<p class="lead animated animatedFadeInUp fadeInUp">ToolMatching helps your team to find the right combination of tools for remote working</p>-->
-                    <button type="button" id="signupheaderbutton" onclick="window.location = 'app/'" class="btn btn-primary btn-lg signup animated animatedFadeInUp fadeInUp">Get started now</button>
+                    <button type="button" id="signupheaderbutton" onclick="window.location = 'app/'" class="headerbutton-custom animated animatedFadeInUp fadeInUp">Get started now</button>
                 </div>
                 <div id="person">
                     <img src="img/ConfusedPerson-CutOff2.png" alt="Man" width="300">
@@ -67,7 +69,7 @@
             <div class="text-container-stepone animation-fade element-to-hide">
                 <p id="steponetext">Step 3</p>
                 <p id="steponehead">We present you the three most suitable tools with a detailed overview</p>
-                <button type="button" id="signupheaderbutton" onclick="window.location = 'app/'" class="btn btn-primary btn-lg signup animated animatedFadeInUp fadeInUp">Get started now</button>
+                <button type="button" id="signupheaderbutton" onclick="window.location = 'app/'" class="headerbutton-custom animated animatedFadeInUp fadeInUp">Get started now</button>
             </div>
             <div class="picturestep">
                 <img id="step3img" src="img/Home-Step03–Results.png" alt="step3">
@@ -76,7 +78,34 @@
 
 
         <!--<a href="https://euvsvirus.org/">#EUvsVirus</a>-->
-
+    
+        </div> 
+        </div> 
+        <footer class="custom-footer">
+            <div class="footer-container">
+                <div class="footer-content">
+                    <a id="home-link-footer" href="#">Home</a>
+                </div>
+                <div class="footer-content">
+                    <a id="legal-link-footer" href="#">Legal Notice</a>
+                </div>
+                <div class="footer-content-icon" style="float:right; padding-right:40px;">
+                    <a href="#"><img src="img/twitter.svg" alt="twitter" hieight="17"></a>
+                </div>
+                <div class="footer-content-icon" style="float:right; padding-right:25px;">
+                    <a href="#"><img src="img/facebook.svg" alt="facebook" height="17"></a>
+                </div>
+                <div class="footer-content-icon" style="float:right; padding-right:25px;">
+                    <a href="#"><img src="img/instagram.svg" alt="instagram" height="17"></a>
+                </div>
+                <div class="footer-content-icon" style="float:right; padding-right:25px;">
+                    <a href="#"><img src="img/linkedin.svg" alt="linkedin" height="17"></a>
+                </div>
+                <div class="footer-content-icon" style="float:right; padding-right:25px;">
+                    <a href="#"><img src="img/mail.svg" alt="mail" height="17"></a>
+                </div>
+            </div>
+        </footer>
 
     </body>
 
