@@ -7188,7 +7188,7 @@ body {
     font-weight: 400; }
     .masthead .masthead-brand strong {
       font-weight: 900; }
-  .masthead .mainlogo {
+  .masthead #mainlogo {
     width: 242px !important; }
 
 .masthead-brand {
