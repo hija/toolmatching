@@ -69,6 +69,23 @@ h1,h2,h3,h4,h5,h6,p {
   transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
 
+.footerbutton-custom {
+  width: 310px;
+  height: 45px;
+  background: rgb(255, 255, 255) 0% 0% no-repeat padding-box;
+  border: none;
+  border-radius: 15px;
+  opacity: 1;
+  font: Bold 16px/18px Rubik;
+  letter-spacing: 0.4px;
+  color: rgb(0, 0, 0);
+  text-transform: uppercase;
+  opacity: 1;
+  box-shadow: 0 4px 4px rgba(58, 58, 58, 0.2);
+  cursor: pointer;
+  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
 .headerbutton-custom:hover {background-color: rgb(5, 82, 184)}
 
 .container-description {
@@ -232,13 +249,13 @@ h1,h2,h3,h4,h5,h6,p {
 
 #main {
   overflow: auto;
-  padding-bottom: 100px;
+  padding-bottom: 300px;
 }
 
 .custom-footer {
   background-color: #F2F2F2;
   position: relative;
-  height: 100px;
+  height: 270px;
   margin-top: -100px;
   clear: both;
   padding-top: 40px;
@@ -256,6 +273,12 @@ h1,h2,h3,h4,h5,h6,p {
 #legal-link-footer {
   color: #000000;
   padding-left: 30px;
+}
+
+.container-addtool {
+  background-color: rgb(114, 112, 112);
+  z-index: 4;
+  position: relative;
 }
 
 @media screen and (max-width: 900px) {
