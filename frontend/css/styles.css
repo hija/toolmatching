@@ -45,11 +45,37 @@ h1,h2,h3,h4,h5,h6,p {
   z-index: 3;
 }
 
+#headline {
+  text-align: left;
+  font: Regular 80px/95px Rubik;
+  letter-spacing: 0px;
+  color: #000000;
+}
+
+.headerbutton-custom {
+  width: 310px;
+  height: 60px;
+  background: #056CF2 0% 0% no-repeat padding-box;
+  border: none;
+  border-radius: 15px;
+  opacity: 1;
+  font: Bold 18px/22px Rubik;
+  letter-spacing: 0.4px;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  opacity: 1;
+  box-shadow: 0 6px 6px rgba(0,0,0,0.2);
+  cursor: pointer;
+  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.headerbutton-custom:hover {background-color: rgb(5, 82, 184)}
+
 .container-description {
-  background-color: #dbdbdb;
   z-index: 4;
   position: relative;
   margin-top: 90vh;
+  background: #056CF2 0% 0% no-repeat padding-box;
 }
 
 .container-stepone {
@@ -64,6 +90,11 @@ h1,h2,h3,h4,h5,h6,p {
   font-size: 20px;
   padding-top: 70px;
   padding-bottom: 70px;
+  text-align: left;
+  font: Regular 20px/26px Rubik;
+  letter-spacing: 0.4px;
+  color: #FFFFFF;
+  opacity: 1;
 }
 
 .text-container-stepone {
@@ -89,13 +120,8 @@ h1,h2,h3,h4,h5,h6,p {
   align-self: center;
 }
 
-.footer {
-  width: 100%;
-  align-items: center; 
-}
-
 #steponetext {
-  color:#007bff;
+  color:#056CF2;
   font-weight: bold;
   margin-bottom: 0;
 }
@@ -198,6 +224,38 @@ h1,h2,h3,h4,h5,h6,p {
 #mainlogo {
   padding-left: 50px;
   width: 220px;
+}
+
+#container {
+  min-height: 100%;
+}
+
+#main {
+  overflow: auto;
+  padding-bottom: 100px;
+}
+
+.custom-footer {
+  background-color: #F2F2F2;
+  position: relative;
+  height: 100px;
+  margin-top: -100px;
+  clear: both;
+  padding-top: 40px;
+  padding-left: 50px;
+}
+
+.footer-container {
+  display: block ruby;
+}
+
+#home-link-footer {
+  color: #000000;
+}
+
+#legal-link-footer {
+  color: #000000;
+  padding-left: 30px;
 }
 
 @media screen and (max-width: 900px) {
