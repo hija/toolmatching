@@ -7273,7 +7273,9 @@ body {
         margin-right: 10px;
         display: inline-block; }
     .mastfoot .nav .continue a {
-      padding: 20px 0 0 20px; }
+      padding: 20px 0 0 20px;
+      cursor: pointer;
+      color: #056CF2 !important; }
       .mastfoot .nav .continue a svg {
         position: relative;
         top: -2px;
