@@ -32,8 +32,10 @@ def create_app(test_config=None):
 
     category_data_dict = dict()
     for category in questionnaire_categories_data['categories']:
-        with open(os.path.join(app.instance_path, category['data'])) as data:
+        with open(os.path.join(app.instance_path, category['data']), encoding='utf-8') as data:
             category_data_dict[category['endpoint']] = json.load(data)
+
+    print(category_data_dict)
 
     with open(os.path.join(app.instance_path, 'tools.json')) as data:
         tool_data = json.load(data)['Tools']
@@ -57,6 +59,9 @@ def create_app(test_config=None):
         elif data['type'] == 'single-choice':
             return render_template('SingleChoice.html', question=data['question'],
                                    choices=data['choices'], questionid=data['id'])
+        elif data['type'] == 'multiple-choice':
+            return render_template('MultipleChoice.html', question=data['question'],
+                                   choices=data['choices'], questionid=data['id'])
         elif data['type'] == 'number':
             return render_template('Slide.html', question=data['question'],
                                    min=data['min'], max=data['max'], default=data['default'], questionid=data['id'])
@@ -75,7 +80,7 @@ def create_app(test_config=None):
 
                     if tool_values is list and users_values is list:
                         if bool(set(tool_values) & set(users_values)):
-                            tool_points[tool['name']] += 1
+                            tool_points[tool['name']] += len(set(tool_values) & set(users_values))
                     elif isinstance(tool_values, str) and isinstance(users_values, str):
                         if tool_values == users_values:
                             tool_points[tool['name']] += 1
@@ -113,8 +118,7 @@ def create_app(test_config=None):
             session.clear()
 
             category = request.values.get('category')
-            if not (any(category_data['endpoint'] == category for category_data in
-                        questionnaire_categories_data['categories'])):
+            if not(category in category_data_dict):
                 return jsonify(
                     {'error': 'Unknown category. Please restart. In the worst case, please choose another category.'})
 
@@ -136,6 +140,8 @@ def create_app(test_config=None):
                 response = False
             elif response.isdigit():
                 response = int(response)
+            elif ';' in response:
+                response = response.split(';')
 
             session['answers'][request.values.get('id')] = response
             session['question'] += 1  # Increase current questionnumber
