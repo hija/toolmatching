@@ -7628,3 +7628,26 @@ input[type='range']::-webkit-slider-thumb {
   letter-spacing: 0.4px;
   color: #D9D9D9;
   text-transform: uppercase; }
+
+.custom-footer {
+  background-color: #F2F2F2;
+  position: relative;
+  clear: both;
+  padding: 40px 60px; }
+
+.footer-container {
+  display: block ruby; }
+
+#home-link-footer {
+  color: #000000; }
+
+#legal-link-footer {
+  color: #000000;
+  padding-left: 30px; }
+
+.legal h2 {
+  font: 20px/26px Rubik;
+  font-weight: 900;
+  margin-bottom: 0;
+  letter-spacing: 0.4px;
+  color: #000000; }
