@@ -7446,6 +7446,10 @@ body {
     background-color: #056CF2;
     color: #FFF; }
 
+.scale input::checked + .box {
+  background-color: #056CF2;
+  color: #FFF; }
+
 input[type="range"] {
   -webkit-appearance: none;
   -moz-apperance: none;

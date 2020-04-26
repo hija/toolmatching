@@ -329,6 +329,8 @@ body {
 			color: #FFF;
 		}
 	}
+	input::checked + .box { background-color: #056CF2; 
+			color: #FFF; }
 }
 
 
