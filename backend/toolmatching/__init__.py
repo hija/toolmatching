@@ -35,6 +35,8 @@ def create_app(test_config=None):
         with open(os.path.join(app.instance_path, category['data'])) as data:
             category_data_dict[category['endpoint']] = json.load(data)
 
+    print(category_data_dict)
+
     with open(os.path.join(app.instance_path, 'tools.json')) as data:
         tool_data = json.load(data)['Tools']
 
@@ -113,8 +115,7 @@ def create_app(test_config=None):
             session.clear()
 
             category = request.values.get('category')
-            if not (any(category_data['endpoint'] == category for category_data in
-                        questionnaire_categories_data['categories'])):
+            if not(category in category_data_dict):
                 return jsonify(
                     {'error': 'Unknown category. Please restart. In the worst case, please choose another category.'})
 
