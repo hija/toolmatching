@@ -4,6 +4,14 @@
 <head>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+<link rel="stylesheet" type="text/css" href="https://wpcc.io/lib/1.0.2/cookieconsent.min.css"/>
+<script src="https://wpcc.io/lib/1.0.2/cookieconsent.min.js"></script><script>window.addEventListener("load", function(){window.wpcc.init({"border":"thin","corners":"small","colors":{"popup":{"background":"#ffffff","text":"#000000","border":"#b6b6b6"},"button":{"background":"#555555","text":"#ffffff"}},"position":"bottom-right","content":{"message":"This website uses cookies to ensure you get the best experience on our website. "}})});</script>
+
+
+
 <title>ToolMatching</title>
 <link rel="icon" type="image/vnd.microsoft.icon" href="favicon.ico">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -28,12 +36,12 @@
         <div class="position-absolute w-100 h-100 o-hidden top-0">       
             <div class="jumbotron jumbotron-fluid round-header transform">
                 <div class="container">
-                    <h1 class="display-4 animated animatedFadeInUp fadeInUp" id ="headline">Find out which tool perfectly fits your team's needs</h1>
+                    <h1 class="display-4 animated animatedFadeInUp fadeInUp" id ="headline">Find the perfect tool for <br> <span style = "text-decoration: underline;">your needs</span></h1>
                     <!--<p class="lead animated animatedFadeInUp fadeInUp">ToolMatching helps your team to find the right combination of tools for remote working</p>-->
                     <button type="button" id="signupheaderbutton" onclick="window.location = 'app/'" class="headerbutton-custom animated animatedFadeInUp fadeInUp">Get started now</button>
                 </div>
                 <div id="person">
-                    <img src="img/ConfusedPerson-CutOff2.png" alt="Man" width="300">
+                    <img src="img/ConfusedPerson-CutOff2.png" alt="Man" width="400">
                 </div> 
                 <div id="icons">
                     <img id="icons-img" src="img/HeroSection-AppIcons.png" alt="icons">
@@ -82,6 +90,8 @@
     
         </div> 
         </div> 
+
+<!--
         <footer class="custom-footer">
             <div class="footer-container" style="padding-bottom:120px;">
                 <button type="button" onclick="#" class="footerbutton-custom">SUBMIT NEW TOOL</button>
@@ -112,7 +122,42 @@
                     <a href="#"><img src="img/mail.svg" alt="mail" height="17"></a>
                 </div>
             </div>
+        </footer>-->
+
+        <footer class="custom-footerstack">
+            <div class="footer-bottom">
+                <div class="footer-right-top">
+                    <p>Submit a tool that is not yet contained in our service. Give us a short summary of what it is about and a link to the website. We will review your suggestion and eventually add it to our database.</p></i>
+                </div>
+                <div class="footer-left">
+                    <p class="footer-links">
+                        <button type="button" onclick="#" class="footerbutton-custom">SUBMIT NEW TOOL</button>
+                    </p>
+                </div>
+            </div>
         </footer>
+
+        <footer class="custom-footer">
+            <div class="footer-bottom">
+                <div class="footer-right">
+                    <a href="#" style="padding-left:12px"><img src="img/twitter.svg" alt="twitter" hieight="17"></i></a>
+                    <a href="#" style="padding-left:12px"><img src="img/facebook.svg" alt="facebook" height="17"></i></a>
+                    <a href="#" style="padding-left:12px"><img src="img/instagram.svg" alt="instagram" height="17"></i></a>
+                    <a href="#" style="padding-left:12px"><img src="img/linkedin.svg" alt="linkedin" height="17"></i></a>
+                    <a href="#" style="padding-left:12px"><img src="img/mail.svg" alt="mail" height="17"></i></a>
+                </div>
+                <div class="footer-left">
+                    <p class="footer-links">
+                        <a id="home-link-footer" href="#">Home</a>
+                        <a id="legal-link-footer" href="Legal.html">Legal Notice</a>
+                    </p>
+                </div>
+            </div>
+            
+
+        </footer>  
+        
+        
 
     </body>
 
