@@ -235,12 +235,13 @@ h1,h2,h3,h4,h5,h6,p {
 }
 
 .navbar {
-  z-index:10;
+  z-index:10; padding: 0 50px; 
 }
 
+.navbar-round { display: inline-block; }
 #mainlogo {
-  padding-left: 50px;
-  width: 220px;
+  
+  width: 242px !important;
 }
 
 #container {
@@ -298,7 +299,7 @@ h1,h2,h3,h4,h5,h6,p {
 
 #legal-link-footer {
   color: #000000;
-  padding-left: 30px;
+  padding-left: 40px;
 }
 
 .container-addtool {

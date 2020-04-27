@@ -7167,8 +7167,6 @@ body {
   font-size: 20px; }
 
 body {
-  display: -ms-flexbox;
-  display: flex;
   color: #000000;
   background-color: #FFF; }
 
@@ -7245,8 +7243,8 @@ body {
   .mastfoot p {
     margin: 0;
     padding: 0;
-    padding-left: 3rem !important;
-    padding-right: 3rem !important; }
+    padding-left: 2rem !important;
+    padding-right: 2rem !important; }
   .mastfoot .nav {
     display: flex;
     justify-content: space-between;
@@ -7759,7 +7757,7 @@ input[type='range']::-webkit-slider-thumb {
   background-color: #F2F2F2;
   position: relative;
   clear: both;
-  padding: 40px 60px; }
+  padding: 40px 50px; }
 
 .footer-container {
   display: block ruby; }
@@ -7769,7 +7767,7 @@ input[type='range']::-webkit-slider-thumb {
 
 #legal-link-footer {
   color: #000000;
-  padding-left: 30px; }
+  padding-left: 40px; }
 
 .legal h2 {
   font: 20px/26px Rubik;
