@@ -7757,7 +7757,7 @@ input[type='range']::-webkit-slider-thumb {
   background-color: #F2F2F2;
   position: relative;
   clear: both;
-  padding: 40px 60px; }
+  padding: 40px 50px; }
 
 .footer-container {
   display: block ruby; }
