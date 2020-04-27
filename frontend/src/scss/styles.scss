@@ -58,8 +58,6 @@ body {
 }
 
 body {
-  display: -ms-flexbox;
-  display: flex;
   color: $body-color;
   background-color: #FFF;
 }
@@ -142,7 +140,7 @@ body {
 	&.no_bg { background-color: #FFF; 
 		padding-bottom: 50px;
 	}
-	p { margin: 0; padding: 0; padding-left: 3rem !important; padding-right: 3rem !important;}
+	p { margin: 0; padding: 0; padding-left: 2rem !important; padding-right: 2rem !important;}
 
 	.nav { display: flex; justify-content: space-between; background-color: #FFF;
 		.back { text-align: left;
@@ -688,7 +686,7 @@ $offset-y-range-output: 4px;
 
 #legal-link-footer {
   color: #000000;
-  padding-left: 30px;
+  padding-left: 40px;
 }
 
 .legal {
