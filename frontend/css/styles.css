@@ -250,18 +250,44 @@ h1,h2,h3,h4,h5,h6,p {
 
 #main {
   overflow: auto;
-  padding-bottom: 300px;
+  padding-bottom: 100px;
+}
+
+.custom-footerstack {
+  background-color: #F2F2F2;
+  position: relative;
+  height: 330px;
+  clear: both;
+  padding-top: 40px;
+  text-align: left;
+  display:block;
+  padding-left: 50px;
+  padding-right: 50px;
 }
 
 .custom-footer {
   background-color: #F2F2F2;
   position: relative;
-  height: 270px;
+  height: 100px;
   margin-top: -100px;
   clear: both;
   padding-top: 40px;
   padding-left: 50px;
+  padding-right: 50px;
+  text-align: left;
+  display:block;
 }
+
+.footer-right {
+  float: right;
+  max-width: 180px;
+}
+
+.footer-right-top {
+  float: right;
+  max-width: 500px;
+}
+
 
 .footer-container {
   display: block ruby;
@@ -339,6 +365,15 @@ h1,h2,h3,h4,h5,h6,p {
 
   #mainlogo {
     padding-left: 10px;
+  }
+  .custom-footerstack {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  
+  .custom-footer {
+    padding-left: 10px;
+    padding-right: 10px;
   }
 }
 
